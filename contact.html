@@ -81,6 +81,16 @@
     .form-control:focus,.form-select:focus{
       background-color:#121b2b;color:var(--text);border-color:var(--accent);box-shadow:none;
     }
+    .input-group-text{
+      background:#121b2b;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.10);
+      border-right:0;
+      font-weight:700;
+    }
+    .input-group .form-control{
+      border-left:0;
+    }
     @media (min-width: 992px){
       .navbar-collapse{display:flex!important;justify-content:flex-end}
       .navbar-nav{align-items:center}
@@ -181,7 +191,22 @@
 
                 <div class="col-md-6">
                   <label for="no_hp" class="form-label">Nomor HP</label>
-                  <input type="tel" class="form-control" id="no_hp" name="no_hp" placeholder="08xxxxxxxxxx" required>
+                  <div class="input-group">
+                    <span class="input-group-text">62</span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="no_hp"
+                      name="no_hp"
+                      placeholder="81234567890"
+                      inputmode="numeric"
+                      pattern="[0-9]{8,13}"
+                      maxlength="13"
+                      required>
+                  </div>
+                  <div class="form-text text-white-50">
+                    Isi tanpa 0 di depan. Contoh: 81234567890
+                  </div>
                 </div>
 
                 <div class="col-md-6">
@@ -248,6 +273,11 @@ const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbyrwVFm9nfKjJXOuU0
 const form = document.getElementById('bookingForm');
 const submitBtn = document.getElementById('submitBtn');
 const formAlert = document.getElementById('formAlert');
+const noHpInput = document.getElementById('no_hp');
+
+noHpInput.addEventListener('input', () => {
+  noHpInput.value = noHpInput.value.replace(/\D/g, '');
+});
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
