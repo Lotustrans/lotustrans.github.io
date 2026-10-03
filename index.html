@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <title>Lotus Trans | Rental Suzuki XL7 dengan Sopir</title>
 
   <meta
     name="description"
-    content="Lotus Trans menyediakan rental Suzuki XL7 dengan sopir untuk kebutuhan keluarga, bisnis, antar-jemput, perjalanan dalam kota, dan luar kota."
-  >
+    content="Lotus Trans menyediakan rental Suzuki XL7 dengan sopir untuk perjalanan keluarga, bisnis, antar-jemput, dalam kota, dan luar kota."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,1462 +25,821 @@
   >
 
   <style>
+    :root{
+      --bg:#07111d;
+      --bg-dark:#040814;
+      --card:rgba(10,18,33,.76);
 
-    /* =========================================================
-       ROOT
-    ========================================================= */
+      --text:#eef4ff;
+      --muted:#9aa8bd;
 
-    :root {
-      --bg: #07111f;
-      --bg-soft: #0b1728;
-      --bg-deep: #050d19;
+      --line:rgba(255,255,255,.08);
 
-      --card: rgba(255,255,255,.045);
-      --card-hover: rgba(255,255,255,.07);
+      --accent:#22c55e;
+      --accent-dark:#16a34a;
+      --accent2:#38bdf8;
 
-      --text: #f4f7fb;
-      --muted: #9eacbf;
+      --shadow:0 22px 60px rgba(0,0,0,.38);
 
-      --line: rgba(255,255,255,.09);
-
-      --green: #19d47b;
-      --green-dark: #11b968;
-
-      --blue: #3b82f6;
-
-      --shadow: 0 20px 60px rgba(0,0,0,.25);
-
-      --radius: 20px;
+      --radius:24px;
     }
 
-
-    /* =========================================================
-       GLOBAL
-    ========================================================= */
-
-    * {
-      box-sizing: border-box;
+    *{
+      box-sizing:border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      margin: 0;
-
-      font-family: 'Inter', sans-serif;
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
 
       background:
         radial-gradient(
-          circle at 10% 5%,
-          rgba(25,212,123,.07),
-          transparent 30%
+          circle at top left,
+          rgba(56,189,248,.14),
+          transparent 28%
         ),
         radial-gradient(
-          circle at 90% 15%,
-          rgba(59,130,246,.07),
-          transparent 30%
+          circle at top right,
+          rgba(34,197,94,.10),
+          transparent 26%
         ),
-        var(--bg);
+        linear-gradient(
+          180deg,
+          var(--bg-dark) 0%,
+          var(--bg) 100%
+        );
 
-      color: var(--text);
-
-      line-height: 1.6;
-
-      overflow-x: hidden;
+      overflow-x:hidden;
     }
 
-    a {
-      text-decoration: none;
+    a{
+      text-decoration:none;
     }
 
-    img {
-      max-width: 100%;
-    }
-
-
-    /* =========================================================
+    /* =========================
        NAVBAR
-    ========================================================= */
+    ========================= */
 
-    .navbar {
-      background: rgba(7,17,31,.88);
+    .navbar-blur{
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
 
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background:rgba(5,8,20,.72);
 
-      border-bottom: 1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
 
-    .navbar-brand {
-      color: #fff !important;
-
-      font-size: 20px;
-
-      font-weight: 800;
-
-      letter-spacing: -.5px;
+    .brand{
+      font-weight:800;
+      color:var(--text);
+      letter-spacing:-.02em;
+      font-size:1.25rem;
     }
 
-    .navbar-brand span {
-      color: var(--green);
+    .brand span{
+      color:var(--accent);
     }
 
-    .nav-link {
-      color: #aebbd0 !important;
-
-      font-size: 14px;
-
-      font-weight: 500;
-
-      margin-left: 10px;
-
-      transition: .25s ease;
+    .nav-link{
+      color:var(--muted)!important;
+      font-weight:600;
+      padding:10px 12px!important;
+      transition:.2s ease;
     }
 
     .nav-link:hover,
-    .nav-link.active {
-      color: #fff !important;
+    .nav-link.active{
+      color:var(--text)!important;
     }
 
-    .btn-wa-nav {
-      background: var(--green);
+    /* =========================
+       BUTTON
+    ========================= */
 
-      color: #04120b !important;
+    .btn-cta{
+      border:0;
+      border-radius:14px;
 
-      font-weight: 700;
+      padding:12px 18px;
 
-      border-radius: 10px;
+      font-weight:700;
 
-      padding: 9px 15px !important;
+      transition:.2s ease;
 
-      margin-left: 15px;
-
-      border: 0;
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 7px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
     }
 
-    .btn-wa-nav:hover {
-      background: #25e789;
+    .btn-primary-grad{
+      background:
+        linear-gradient(
+          135deg,
+          var(--accent),
+          var(--accent-dark)
+        );
+
+      color:#06110b;
+
+      box-shadow:
+        0 12px 28px rgba(34,197,94,.18);
     }
 
-    .navbar-toggler {
-      border-color: rgba(255,255,255,.15);
-
-      border-radius: 10px;
+    .btn-primary-grad:hover{
+      transform:translateY(-1px);
+      color:#06110b;
     }
 
-    .navbar-toggler:focus {
-      box-shadow: none;
+    .btn-soft{
+      background:rgba(255,255,255,.05);
+
+      border:1px solid var(--line);
+
+      color:var(--text);
     }
 
+    .btn-soft:hover{
+      background:rgba(255,255,255,.08);
+      color:var(--text);
+    }
 
-    /* =========================================================
+    /* =========================
        HERO
-    ========================================================= */
+    ========================= */
 
-    .hero {
-      padding: 125px 0 80px;
-
-      position: relative;
-
-      overflow: hidden;
+    .hero{
+      padding:28px 0 34px;
     }
 
-    .hero::before {
-      content: "";
+    .hero-shell{
+      border:1px solid var(--line);
 
-      position: absolute;
+      border-radius:32px;
 
-      width: 520px;
-      height: 520px;
+      overflow:hidden;
 
-      background: rgba(25,212,123,.055);
+      box-shadow:var(--shadow);
 
-      border-radius: 50%;
-
-      filter: blur(110px);
-
-      top: -220px;
-      left: -200px;
-
-      pointer-events: none;
+      background:
+        linear-gradient(
+          110deg,
+          rgba(4,8,20,.94) 0%,
+          rgba(4,8,20,.78) 48%,
+          rgba(4,8,20,.38) 100%
+        ),
+        url('https://drive.google.com/thumbnail?id=1h9EMbRgydTTsbEhfU9y0JvR-rcnRlI0c&sz=w2500')
+        center/cover;
     }
 
-    .hero-content {
-      position: relative;
+    .hero-inner{
+      min-height:78vh;
 
-      z-index: 2;
+      padding:32px;
+
+      display:flex;
+      align-items:center;
     }
 
+    /* =========================
+       HERO CONTENT
+    ========================= */
 
-    /* =========================================================
-       HERO LEFT
-    ========================================================= */
+    .pill{
+      display:inline-flex;
 
-    .eyebrow {
-      display: inline-flex;
+      gap:8px;
 
-      align-items: center;
+      align-items:center;
 
-      gap: 8px;
+      padding:10px 14px;
 
-      padding: 7px 13px;
+      border-radius:999px;
 
-      border-radius: 50px;
+      background:rgba(255,255,255,.05);
 
-      background: rgba(25,212,123,.08);
+      border:1px solid var(--line);
 
-      border: 1px solid rgba(25,212,123,.18);
+      font-size:13px;
 
-      color: var(--green);
-
-      font-size: 12px;
-
-      font-weight: 700;
-
-      margin-bottom: 20px;
+      color:#dce7f8;
     }
 
-    .hero h1 {
-      font-size: clamp(40px, 6vw, 64px);
+    .hero-title{
+      font-size:clamp(40px,5vw,68px);
 
-      line-height: 1.05;
+      line-height:1.02;
 
-      letter-spacing: -2.5px;
+      font-weight:800;
 
-      font-weight: 800;
+      letter-spacing:-.03em;
 
-      margin-bottom: 20px;
+      margin:18px 0 16px;
 
-      max-width: 760px;
+      max-width:11ch;
     }
 
-    .hero h1 span {
-      color: var(--green);
+    .hero-text{
+      color:#d4ddec;
+
+      max-width:640px;
+
+      font-size:18px;
+
+      line-height:1.8;
+
+      margin-bottom:0;
     }
 
-    .hero-description {
-      max-width: 650px;
+    /* =========================
+       META
+    ========================= */
 
-      color: var(--muted);
+    .meta-row{
+      display:flex;
 
-      font-size: 17px;
+      flex-wrap:wrap;
 
-      line-height: 1.75;
+      gap:10px;
 
-      margin-bottom: 0;
+      margin-top:20px;
     }
 
+    .meta{
+      padding:10px 14px;
 
-    /* =========================================================
-       HERO BUTTON
-    ========================================================= */
+      border-radius:14px;
 
-    .hero-actions {
-      display: flex;
+      background:rgba(255,255,255,.06);
 
-      flex-wrap: wrap;
+      border:1px solid var(--line);
 
-      gap: 10px;
+      font-size:13px;
 
-      margin-top: 28px;
+      color:#dbe5f5;
     }
 
-    .btn-main {
-      display: inline-flex;
+    /* =========================
+       GLASS CARD
+    ========================= */
 
-      align-items: center;
+    .glass-card,
+    .card-soft{
+      background:var(--card);
 
-      justify-content: center;
+      border:1px solid var(--line);
 
-      gap: 8px;
+      border-radius:var(--radius);
 
-      background: var(--green);
+      box-shadow:var(--shadow);
 
-      color: #04120b;
-
-      padding: 12px 20px;
-
-      border-radius: 11px;
-
-      font-size: 14px;
-
-      font-weight: 700;
-
-      transition: .25s ease;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
     }
 
-    .btn-main:hover {
-      background: #25e789;
-
-      color: #04120b;
-
-      transform: translateY(-2px);
+    .glass-card{
+      transition:.25s ease;
     }
 
-    .btn-outline-soft {
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 8px;
-
-      padding: 11px 19px;
-
-      border-radius: 11px;
-
-      border: 1px solid var(--line);
-
-      color: #dce4ef;
-
-      background: rgba(255,255,255,.035);
-
-      font-size: 14px;
-
-      font-weight: 600;
-
-      transition: .25s ease;
+    .glass-card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(255,255,255,.13);
     }
 
-    .btn-outline-soft:hover {
-      color: #fff;
-
-      background: rgba(255,255,255,.07);
-
-      border-color: rgba(255,255,255,.14);
+    .section-pad{
+      padding:28px 0;
     }
 
+    .card-soft{
+      height:100%;
 
-    /* =========================================================
-       HERO TRUST
-    ========================================================= */
-
-    .hero-trust {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 9px;
-
-      margin-top: 25px;
+      transition:.25s ease;
     }
 
-    .trust-item {
-      padding: 8px 12px;
+    .card-soft:hover{
+      transform:translateY(-3px);
 
-      border-radius: 50px;
-
-      background: rgba(255,255,255,.035);
-
-      border: 1px solid var(--line);
-
-      color: #aebbd0;
-
-      font-size: 12px;
-
-      font-weight: 500;
+      border-color:rgba(255,255,255,.13);
     }
 
+    /* =========================
+       ICON
+    ========================= */
 
-    /* =========================================================
-       HERO VEHICLE CARD
-    ========================================================= */
+    .icon-badge{
+      width:48px;
+      height:48px;
 
-    .hero-vehicle-card {
-      padding: 18px;
+      border-radius:16px;
 
-      background: var(--card);
+      display:inline-flex;
 
-      border: 1px solid var(--line);
+      align-items:center;
+      justify-content:center;
 
-      border-radius: 22px;
+      background:rgba(56,189,248,.10);
 
-      box-shadow: var(--shadow);
+      border:1px solid rgba(56,189,248,.18);
 
-      backdrop-filter: blur(12px);
+      margin-bottom:14px;
 
-      -webkit-backdrop-filter: blur(12px);
-
-      position: relative;
-
-      overflow: hidden;
+      font-size:20px;
     }
 
-    .hero-vehicle-card::before {
-      content: "";
+    /* =========================
+       VEHICLE IMAGE
+    ========================= */
 
-      position: absolute;
+    .vehicle-image{
+      object-fit:cover;
 
-      width: 170px;
-      height: 170px;
+      width:100%;
+      height:100%;
 
-      background: rgba(25,212,123,.08);
-
-      border-radius: 50%;
-
-      right: -80px;
-      top: -80px;
-
-      filter: blur(5px);
+      display:block;
     }
 
-    .vehicle-label {
-      color: var(--green);
+    /* =========================
+       SMALL LABEL
+    ========================= */
 
-      font-size: 11px;
+    .section-label{
+      font-size:12px;
 
-      font-weight: 700;
+      letter-spacing:.08em;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
 
-      letter-spacing: 1px;
+      color:var(--accent2);
 
-      margin-bottom: 5px;
+      font-weight:700;
     }
 
-    .vehicle-title {
-      font-size: 21px;
+    /* =========================
+       WHATSAPP FLOATING BUTTON
+    ========================= */
 
-      font-weight: 700;
+    .floating-wa{
+      position:fixed;
 
-      margin-bottom: 15px;
-    }
+      right:18px;
+      bottom:18px;
 
-    .vehicle-photo {
-      width: 100%;
+      z-index:9999;
 
-      aspect-ratio: 4 / 3;
+      border-radius:999px;
 
-      object-fit: cover;
-
-      display: block;
-
-      border-radius: 17px;
-
-      border: 1px solid var(--line);
-
-      background: #0a1525;
-    }
-
-    .vehicle-description {
-      color: var(--muted);
-
-      font-size: 13px;
-
-      margin: 15px 0 0;
-    }
-
-
-    /* =========================================================
-       SECTION
-    ========================================================= */
-
-    .section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      margin-bottom: 42px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(28px, 4vw, 40px);
-
-      font-weight: 800;
-
-      letter-spacing: -1px;
-
-      margin-bottom: 12px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-
-      max-width: 650px;
-
-      margin: 0 auto;
-    }
-
-    .section-label {
-      display: inline-block;
-
-      color: var(--green);
-
-      font-size: 11px;
-
-      font-weight: 700;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-      margin-bottom: 10px;
-    }
-
-
-    /* =========================================================
-       WHY LOTUS
-    ========================================================= */
-
-    .benefit-card {
-      height: 100%;
-
-      padding: 28px;
-
-      background: var(--card);
-
-      border: 1px solid var(--line);
-
-      border-radius: var(--radius);
-
-      transition: .3s ease;
-
-      position: relative;
-
-      overflow: hidden;
-    }
-
-    .benefit-card::before {
-      content: "";
-
-      position: absolute;
-
-      width: 120px;
-      height: 120px;
-
-      background: rgba(25,212,123,.05);
-
-      border-radius: 50%;
-
-      right: -60px;
-      top: -60px;
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-5px);
-
-      background: var(--card-hover);
-
-      border-color: rgba(25,212,123,.2);
-    }
-
-    .benefit-icon {
-      width: 50px;
-      height: 50px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      border-radius: 14px;
-
-      background: rgba(25,212,123,.1);
-
-      border: 1px solid rgba(25,212,123,.15);
-
-      font-size: 22px;
-
-      margin-bottom: 20px;
-    }
-
-    .benefit-card h3 {
-      font-size: 18px;
-
-      font-weight: 700;
-
-      margin-bottom: 10px;
-    }
-
-    .benefit-card p {
-      color: var(--muted);
-
-      font-size: 14px;
-
-      margin-bottom: 0;
-    }
-
-
-    /* =========================================================
-       SERVICE PREVIEW
-    ========================================================= */
-
-    .service-section {
-      padding: 20px 0 80px;
-    }
-
-    .service-preview {
-      height: 100%;
-
-      padding: 27px;
-
-      background: var(--card);
-
-      border: 1px solid var(--line);
-
-      border-radius: 20px;
-
-      transition: .3s ease;
-    }
-
-    .service-preview:hover {
-      transform: translateY(-4px);
-
-      background: var(--card-hover);
-
-      border-color: rgba(25,212,123,.2);
-    }
-
-    .service-icon {
-      width: 50px;
-      height: 50px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      border-radius: 14px;
-
-      background: rgba(25,212,123,.1);
-
-      border: 1px solid rgba(25,212,123,.15);
-
-      font-size: 22px;
-
-      margin-bottom: 18px;
-    }
-
-    .service-preview h3 {
-      font-size: 18px;
-
-      font-weight: 700;
-
-      margin-bottom: 9px;
-    }
-
-    .service-preview p {
-      color: var(--muted);
-
-      font-size: 13px;
-
-      margin-bottom: 0;
-    }
-
-
-    /* =========================================================
-       VEHICLE SECTION
-    ========================================================= */
-
-    .vehicle-section {
-      padding: 25px 0 85px;
-    }
-
-    .vehicle-main-image {
-      width: 100%;
-
-      min-height: 390px;
-
-      object-fit: cover;
-
-      border-radius: 24px;
-
-      border: 1px solid var(--line);
-
-      background: #0a1525;
-    }
-
-    .vehicle-content {
-      padding-left: 25px;
-    }
-
-    .vehicle-content h2 {
-      font-size: clamp(30px, 4vw, 42px);
-
-      font-weight: 800;
-
-      letter-spacing: -1px;
-
-      margin-bottom: 15px;
-    }
-
-    .vehicle-content > p {
-      color: var(--muted);
-
-      margin-bottom: 25px;
-    }
-
-    .feature-list {
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 15px;
-
-      margin-bottom: 23px;
-    }
-
-    .feature-item {
-      display: flex;
-
-      align-items: flex-start;
-
-      gap: 12px;
-    }
-
-    .feature-check {
-      width: 24px;
-      height: 24px;
-
-      flex: 0 0 24px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      border-radius: 50%;
-
-      background: rgba(25,212,123,.1);
-
-      color: var(--green);
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      margin-top: 2px;
-    }
-
-    .feature-text strong {
-      display: block;
-
-      font-size: 14px;
-
-      margin-bottom: 2px;
-    }
-
-    .feature-text span {
-      color: var(--muted);
-
-      font-size: 13px;
-    }
-
-    .service-note {
-      padding: 13px 15px;
-
-      border-radius: 14px;
-
-      background: rgba(255,255,255,.035);
-
-      border: 1px solid var(--line);
-
-      color: #aebbd0;
-
-      font-size: 13px;
-
-      line-height: 1.6;
-    }
-
-    .service-note strong {
-      color: #e7edf6;
-    }
-
-
-    /* =========================================================
-       BOOKING STEPS
-    ========================================================= */
-
-    .steps-section {
-      padding: 20px 0 80px;
-    }
-
-    .step-card {
-      position: relative;
-
-      height: 100%;
-
-      padding: 27px;
-
-      background: var(--card);
-
-      border: 1px solid var(--line);
-
-      border-radius: 20px;
-    }
-
-    .step-number {
-      width: 38px;
-      height: 38px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      border-radius: 12px;
-
-      background: rgba(25,212,123,.1);
-
-      border: 1px solid rgba(25,212,123,.18);
-
-      color: var(--green);
-
-      font-size: 14px;
-
-      font-weight: 800;
-
-      margin-bottom: 18px;
-    }
-
-    .step-card h3 {
-      font-size: 17px;
-
-      font-weight: 700;
-
-      margin-bottom: 8px;
-    }
-
-    .step-card p {
-      color: var(--muted);
-
-      font-size: 13px;
-
-      margin-bottom: 0;
-    }
-
-
-    /* =========================================================
-       CTA
-    ========================================================= */
-
-    .cta-section {
-      padding: 20px 0 90px;
-    }
-
-    .cta-box {
-      position: relative;
-
-      overflow: hidden;
-
-      padding: 55px 45px;
-
-      border-radius: 25px;
+      padding:14px 18px;
 
       background:
         linear-gradient(
           135deg,
-          rgba(25,212,123,.10),
-          rgba(59,130,246,.07)
+          #25d366,
+          #128c7e
         );
 
-      border: 1px solid rgba(255,255,255,.1);
+      color:#fff;
+
+      font-weight:700;
+
+      box-shadow:
+        0 18px 35px rgba(0,0,0,.35);
+
+      border:0;
+
+      transition:.2s ease;
     }
 
-    .cta-box::after {
-      content: "";
+    .floating-wa:hover{
+      transform:translateY(-2px);
 
-      position: absolute;
-
-      width: 250px;
-      height: 250px;
-
-      border-radius: 50%;
-
-      background: rgba(25,212,123,.07);
-
-      filter: blur(70px);
-
-      right: -100px;
-      top: -100px;
+      color:#fff;
     }
 
-    .cta-content {
-      position: relative;
-
-      z-index: 2;
-    }
-
-    .cta-box h2 {
-      font-size: clamp(27px, 4vw, 38px);
-
-      font-weight: 800;
-
-      margin-bottom: 12px;
-    }
-
-    .cta-box p {
-      color: var(--muted);
-
-      max-width: 600px;
-
-      margin-bottom: 25px;
-    }
-
-
-    /* =========================================================
-       WHATSAPP SVG
-    ========================================================= */
-
-    .wa-icon {
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      flex-shrink: 0;
-    }
-
-    .wa-icon svg {
-      display: block;
-    }
-
-
-    /* =========================================================
-       FLOATING WHATSAPP
-    ========================================================= */
-
-    .wa-float {
-      position: fixed;
-
-      right: 20px;
-      bottom: 20px;
-
-      width: 54px;
-      height: 54px;
-
-      border-radius: 50%;
-
-      background: var(--green);
-
-      color: #04120b;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-
-      z-index: 999;
-
-      transition: .25s ease;
-    }
-
-    .wa-float:hover {
-      transform: translateY(-3px) scale(1.03);
-
-      background: #25e789;
-
-      color: #04120b;
-    }
-
-
-    /* =========================================================
+    /* =========================
        FOOTER
-    ========================================================= */
+    ========================= */
 
-    footer {
-      border-top: 1px solid var(--line);
+    footer{
+      padding:30px 0 44px;
 
-      padding: 30px 0;
+      color:var(--muted);
 
-      color: #7f8da2;
-
-      font-size: 13px;
+      font-size:14px;
     }
 
-    footer strong {
-      color: #dce4ef;
+    .footer-brand{
+      color:var(--text);
+
+      font-weight:700;
+
+      margin-bottom:4px;
     }
 
+    /* =========================
+       NAVBAR TOGGLER
+    ========================= */
 
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
+    .navbar-toggler{
+      border:1px solid rgba(255,255,255,.18);
 
-    @media (max-width: 991px) {
+      box-shadow:none!important;
 
-      .navbar-collapse {
-        padding: 15px 0 10px;
-      }
+      border-radius:14px;
 
-      .nav-link {
-        margin-left: 0;
-
-        padding: 10px 0 !important;
-      }
-
-      .btn-wa-nav {
-        display: inline-flex;
-
-        margin: 10px 0 0;
-      }
-
-      .hero {
-        padding-top: 105px;
-      }
-
-      .vehicle-content {
-        padding-left: 0;
-
-        padding-top: 30px;
-      }
-
-      .vehicle-main-image {
-        min-height: 320px;
-      }
-
+      padding:10px 12px;
     }
 
+    .navbar-toggler:focus{
+      box-shadow:none!important;
+    }
 
-    @media (max-width: 767px) {
+    /* =========================
+       DESKTOP
+    ========================= */
 
-      .hero {
-        padding: 100px 0 60px;
+    @media (min-width:992px){
+
+      .navbar-collapse{
+        display:flex!important;
+
+        justify-content:flex-end;
       }
 
-      .hero h1 {
-        letter-spacing: -1.5px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .section {
-        padding: 60px 0;
-      }
-
-      .benefit-card,
-      .service-preview,
-      .step-card {
-        padding: 25px;
-      }
-
-      .vehicle-main-image {
-        min-height: 250px;
-      }
-
-      .vehicle-section {
-        padding-bottom: 65px;
-      }
-
-      .cta-section {
-        padding-bottom: 70px;
-      }
-
-      .cta-box {
-        padding: 35px 25px;
-      }
-
-      .wa-float {
-        width: 50px;
-        height: 50px;
-
-        right: 16px;
-        bottom: 16px;
+      .navbar-nav{
+        align-items:center;
       }
 
     }
 
+    /* =========================
+       TABLET / MOBILE
+    ========================= */
 
-    @media (max-width: 575px) {
+    @media (max-width:991.98px){
 
-      .hero h1 {
-        font-size: 38px;
+      .hero-inner{
+        min-height:auto;
+
+        padding:24px;
       }
 
-      .hero-actions {
-        flex-direction: column;
+      .hero-title{
+        max-width:none;
       }
 
-      .hero-actions a {
-        width: 100%;
+      .navbar-collapse{
+        margin-top:16px;
+
+        padding:14px;
+
+        border:1px solid var(--line);
+
+        border-radius:18px;
+
+        background:rgba(5,8,20,.85);
       }
 
-      .hero-trust {
-        gap: 7px;
+      .nav-link{
+        padding:12px 0!important;
+
+        border-bottom:1px solid rgba(255,255,255,.06);
       }
 
-      .trust-item {
-        font-size: 11px;
-      }
+      .navbar-collapse .btn{
+        width:100%;
 
-      .hero-vehicle-card {
-        padding: 14px;
-      }
-
-      .vehicle-title {
-        font-size: 19px;
+        margin-top:10px;
       }
 
     }
 
+    /* =========================
+       SMALL MOBILE
+    ========================= */
+
+    @media (max-width:575.98px){
+
+      .hero{
+        padding-top:16px;
+      }
+
+      .hero-shell{
+        border-radius:24px;
+      }
+
+      .hero-inner{
+        padding:20px;
+      }
+
+      .hero-title{
+        font-size:clamp(
+          34px,
+          11vw,
+          48px
+        );
+      }
+
+      .hero-text{
+        font-size:16px;
+
+        line-height:1.7;
+      }
+
+      .meta{
+        font-size:12px;
+
+        padding:9px 12px;
+      }
+
+      .floating-wa{
+        right:14px;
+        bottom:14px;
+
+        padding:13px 16px;
+      }
+
+    }
   </style>
 </head>
 
-
 <body>
 
+<!-- =========================
+     NAVBAR
+========================= -->
 
-  <!-- =======================================================
-       NAVBAR
-  ======================================================== -->
+<header class="navbar-blur sticky-top">
 
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
 
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
 
       <a
-        class="navbar-brand"
+        class="navbar-brand brand"
         href="index.html"
       >
         Lotus<span>Trans</span>
       </a>
 
-
       <button
-        class="navbar-toggler"
+        class="navbar-toggler ms-auto"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div
         class="collapse navbar-collapse"
-        id="navbarNav"
+        id="mainNav"
       >
 
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
           <li class="nav-item">
-
             <a
               class="nav-link active"
               href="index.html"
             >
               Home
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="services.html"
             >
               Layanan
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="pricing.html"
             >
               Pricing
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="gallery.html"
             >
               Galeri
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="faq.html"
             >
               FAQ
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="contact.html"
             >
               Kontak
             </a>
-
           </li>
 
-
-          <li class="nav-item">
+          <li class="nav-item mt-3 mt-lg-0">
 
             <a
-              class="nav-link btn-wa-nav"
+              class="btn btn-cta btn-primary-grad ms-lg-2"
               href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
               target="_blank"
               rel="noopener"
             >
-
-              <span class="wa-icon">
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="17"
-                  height="17"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M20.52 3.48A11.87 11.87 0 0 0 12.04 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.95L.03 24l6.28-1.64a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.43-8.43ZM12.05 21.82h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.87 9.87 0 0 1-1.52-5.29c0-5.47 4.45-9.92 9.93-9.92a9.87 9.87 0 0 1 7.02 2.91 9.88 9.88 0 0 1 2.9 7.03c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
-                </svg>
-
-              </span>
-
               Pesan via WhatsApp
-
             </a>
 
           </li>
-
 
         </ul>
 
       </div>
 
-    </div>
+    </nav>
 
-  </nav>
+  </div>
 
-
-
-  <!-- =======================================================
-       HERO
-  ======================================================== -->
-
-  <header class="hero">
-
-    <div class="container hero-content">
-
-      <div class="row align-items-center g-5">
+</header>
 
 
-        <!-- LEFT -->
+<!-- =========================
+     MAIN
+========================= -->
 
-        <div class="col-lg-7">
+<main>
 
-          <div class="eyebrow">
-            🚘 Suzuki XL7 • Dengan Sopir
-          </div>
+  <!-- HERO -->
 
-
-          <h1>
-
-            Rental Suzuki XL7
-            <span>dengan Sopir.</span>
-
-          </h1>
-
-
-          <p class="hero-description">
-
-            Pilihan praktis untuk perjalanan keluarga,
-            kebutuhan bisnis, antar-jemput, hingga perjalanan
-            luar kota. Booking mudah dan layanan disesuaikan
-            dengan kebutuhan perjalanan Anda.
-
-          </p>
-
-
-          <div class="hero-actions">
-
-            <a
-              href="contact.html"
-              class="btn-main"
-            >
-
-              <span class="wa-icon">
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M20.52 3.48A11.87 11.87 0 0 0 12.04 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.95L.03 24l6.28-1.64a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.43-8.43ZM12.05 21.82h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.87 9.87 0 0 1-1.52-5.29c0-5.47 4.45-9.92 9.93-9.92a9.87 9.87 0 0 1 7.02 2.91 9.88 9.88 0 0 1 2.9 7.03c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
-                </svg>
-
-              </span>
-
-              Booking Sekarang
-
-            </a>
-
-
-            <a
-              href="pricing.html"
-              class="btn-outline-soft"
-            >
-              Lihat Harga
-            </a>
-
-          </div>
-
-
-          <div class="hero-trust">
-
-            <div class="trust-item">
-              ✓ Dengan Sopir
-            </div>
-
-            <div class="trust-item">
-              ✓ Per Jam
-            </div>
-
-            <div class="trust-item">
-              ✓ Harian
-            </div>
-
-            <div class="trust-item">
-              ✓ Dalam & Luar Kota
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- RIGHT -->
-
-        <div class="col-lg-5">
-
-          <div class="hero-vehicle-card">
-
-
-            <div class="vehicle-label">
-              Armada Utama
-            </div>
-
-
-            <div class="vehicle-title">
-              Suzuki XL7 Manual Hybrid
-            </div>
-
-
-            <img
-              src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
-              alt="Suzuki XL7 Lotus Trans"
-              class="vehicle-photo"
-            >
-
-
-            <p class="vehicle-description">
-
-              Nyaman untuk perjalanan keluarga,
-              kebutuhan bisnis, maupun mobilitas pribadi
-              bersama sopir.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- =======================================================
-       WHY LOTUS TRANS
-  ======================================================== -->
-
-  <section class="section pt-0">
+  <section class="hero">
 
     <div class="container">
 
+      <div class="hero-shell">
 
-      <div class="section-title text-center">
+        <div class="hero-inner">
 
-        <div class="section-label">
-          Kenapa Lotus Trans
+          <div class="row g-4 align-items-center w-100">
+
+            <!-- LEFT -->
+
+            <div class="col-lg-7">
+
+              <div class="pill">
+                🚘 Suzuki XL7 • Dengan Sopir
+              </div>
+
+              <h1 class="hero-title">
+                Rental Suzuki XL7 dengan Sopir
+              </h1>
+
+              <p class="hero-text">
+                Nyaman untuk perjalanan keluarga, kebutuhan bisnis,
+                antar-jemput, dan perjalanan luar kota.
+                Booking mudah melalui WhatsApp.
+              </p>
+
+
+              <div class="d-flex flex-wrap gap-2 mt-4">
+
+                <a
+                  class="btn btn-cta btn-primary-grad"
+                  href="contact.html"
+                >
+                  Booking Sekarang
+                </a>
+
+                <a
+                  class="btn btn-cta btn-soft"
+                  href="pricing.html"
+                >
+                  Lihat Harga
+                </a>
+
+              </div>
+
+
+              <div class="meta-row">
+
+                <div class="meta">
+                  Per Jam
+                </div>
+
+                <div class="meta">
+                  Harian
+                </div>
+
+                <div class="meta">
+                  Dalam Kota
+                </div>
+
+                <div class="meta">
+                  Luar Kota
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-5">
+
+              <div class="glass-card p-4">
+
+                <div class="mb-3">
+
+                  <div class="section-label">
+                    Armada Kami
+                  </div>
+
+                  <h2 class="h4 mb-0 mt-1">
+                    Suzuki XL7 Manual Hybrid
+                  </h2>
+
+                </div>
+
+
+                <div
+                  class="ratio ratio-4x3 rounded-4 overflow-hidden border border-light border-opacity-10 mb-3"
+                >
+
+                  <img
+                    src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
+                    alt="Suzuki XL7 Lotus Trans"
+                    class="vehicle-image"
+                  >
+
+                </div>
+
+
+                <p class="mb-0 text-white-50">
+                  SUV modern dan nyaman untuk menemani perjalanan
+                  keluarga maupun kebutuhan perjalanan bisnis.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
-
-        <h2>
-          Perjalanan Lebih Praktis
-        </h2>
-
-        <p>
-          Kami fokus menyediakan layanan rental Suzuki XL7
-          dengan sopir untuk kebutuhan perjalanan yang nyaman
-          dan fleksibel.
-        </p>
 
       </div>
 
+    </div>
+
+  </section>
 
 
-      <div class="row g-4">
+  <!-- BENEFITS -->
+
+  <section class="section-pad">
+
+    <div class="container">
+
+      <div class="row g-3">
 
 
-        <div class="col-md-6 col-lg-4">
+        <!-- CARD 1 -->
 
-          <div class="benefit-card">
+        <div class="col-md-4">
 
-            <div class="benefit-icon">
+          <div class="card-soft p-4">
+
+            <div class="icon-badge">
               🚘
             </div>
 
-            <h3>
-              Armada Suzuki XL7
+            <h3 class="h5">
+              Suzuki XL7
             </h3>
 
-            <p>
-              Satu armada utama yang nyaman dan cocok
-              untuk perjalanan keluarga, bisnis, maupun
-              kebutuhan perjalanan lainnya.
+            <p class="mb-0 text-white-50">
+              Armada yang nyaman untuk perjalanan keluarga,
+              kebutuhan bisnis, maupun perjalanan luar kota.
             </p>
 
           </div>
@@ -1491,23 +847,23 @@
         </div>
 
 
+        <!-- CARD 2 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-4">
 
-          <div class="benefit-card">
+          <div class="card-soft p-4">
 
-            <div class="benefit-icon">
+            <div class="icon-badge">
               👨‍✈️
             </div>
 
-            <h3>
+            <h3 class="h5">
               Dengan Sopir
             </h3>
 
-            <p>
-              Anda dapat menikmati perjalanan tanpa perlu
-              mengemudi sendiri, sehingga lebih praktis
-              untuk berbagai kebutuhan.
+            <p class="mb-0 text-white-50">
+              Perjalanan lebih praktis tanpa perlu menyetir sendiri.
+              Sopir siap membantu perjalanan Anda.
             </p>
 
           </div>
@@ -1515,23 +871,23 @@
         </div>
 
 
+        <!-- CARD 3 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-4">
 
-          <div class="benefit-card">
+          <div class="card-soft p-4">
 
-            <div class="benefit-icon">
+            <div class="icon-badge">
               📍
             </div>
 
-            <h3>
-              Fleksibel
+            <h3 class="h5">
+              Layanan Fleksibel
             </h3>
 
-            <p>
-              Pilihan layanan tersedia untuk kebutuhan
-              per jam, harian, dalam kota, maupun perjalanan
-              luar kota.
+            <p class="mb-0 text-white-50">
+              Tersedia untuk perjalanan per jam, harian,
+              dalam kota, hingga luar kota.
             </p>
 
           </div>
@@ -1545,510 +901,55 @@
 
   </section>
 
+</main>
 
 
-  <!-- =======================================================
-       SERVICE PREVIEW
-  ======================================================== -->
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
 
-  <section class="service-section">
-
-    <div class="container">
-
-
-      <div class="section-title text-center">
-
-        <div class="section-label">
-          Pilihan Layanan
-        </div>
-
-        <h2>
-          Sesuaikan dengan Perjalanan Anda
-        </h2>
-
-        <p>
-          Pilih durasi dan kebutuhan perjalanan yang paling
-          sesuai. Detail harga dapat dilihat pada halaman pricing.
-        </p>
-
-      </div>
+<a
+  class="floating-wa"
+  href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+  target="_blank"
+  rel="noopener"
+>
+  WhatsApp
+</a>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
 
-      <div class="row g-4">
+<footer>
 
+  <div class="container">
 
-        <div class="col-md-6 col-lg-4">
-
-          <div class="service-preview">
-
-            <div class="service-icon">
-              🕐
-            </div>
-
-            <h3>
-              Sewa Per Jam
-            </h3>
-
-            <p>
-              Cocok untuk meeting, urusan bisnis,
-              aktivitas personal, atau kebutuhan mobilitas
-              dalam kota.
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="service-preview">
-
-            <div class="service-icon">
-              📅
-            </div>
-
-            <h3>
-              Sewa Harian
-            </h3>
-
-            <p>
-              Pilihan praktis untuk aktivitas seharian,
-              perjalanan keluarga, acara, maupun kebutuhan kerja.
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="service-preview">
-
-            <div class="service-icon">
-              🛣️
-            </div>
-
-            <h3>
-              Perjalanan Luar Kota
-            </h3>
-
-            <p>
-              Untuk perjalanan antar kota dengan rute dan
-              kebutuhan perjalanan yang dapat dibicarakan terlebih dahulu.
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-
-      <div class="text-center mt-4">
-
-        <a
-          href="services.html"
-          class="btn-outline-soft"
-        >
-          Lihat Semua Layanan →
-        </a>
-
-      </div>
-
+    <div class="footer-brand">
+      Lotus Trans
     </div>
 
-  </section>
-
-
-
-  <!-- =======================================================
-       VEHICLE
-  ======================================================== -->
-
-  <section class="vehicle-section">
-
-    <div class="container">
-
-      <div class="row align-items-center g-4">
-
-
-        <div class="col-lg-6">
-
-          <img
-            src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
-            alt="Suzuki XL7 Lotus Trans"
-            class="vehicle-main-image"
-          >
-
-        </div>
-
-
-
-        <div class="col-lg-6">
-
-          <div class="vehicle-content">
-
-            <div class="section-label">
-              Armada Kami
-            </div>
-
-
-            <h2>
-              Suzuki XL7<br>
-              dengan Sopir
-            </h2>
-
-
-            <p>
-              Suzuki XL7 menjadi armada utama Lotus Trans
-              untuk memberikan perjalanan yang nyaman,
-              praktis, dan sesuai dengan berbagai kebutuhan.
-            </p>
-
-
-            <div class="feature-list">
-
-
-              <div class="feature-item">
-
-                <div class="feature-check">
-                  ✓
-                </div>
-
-                <div class="feature-text">
-
-                  <strong>
-                    Nyaman untuk keluarga
-                  </strong>
-
-                  <span>
-                    Kabin yang nyaman untuk perjalanan bersama
-                    keluarga maupun kebutuhan pribadi.
-                  </span>
-
-                </div>
-
-              </div>
-
-
-
-              <div class="feature-item">
-
-                <div class="feature-check">
-                  ✓
-                </div>
-
-                <div class="feature-text">
-
-                  <strong>
-                    Praktis untuk kebutuhan bisnis
-                  </strong>
-
-                  <span>
-                    Anda dapat fokus pada aktivitas tanpa perlu
-                    menyetir sendiri.
-                  </span>
-
-                </div>
-
-              </div>
-
-
-
-              <div class="feature-item">
-
-                <div class="feature-check">
-                  ✓
-                </div>
-
-                <div class="feature-text">
-
-                  <strong>
-                    Fleksibel mengikuti perjalanan
-                  </strong>
-
-                  <span>
-                    Durasi dan kebutuhan perjalanan dapat
-                    dibicarakan sebelum booking.
-                  </span>
-
-                </div>
-
-              </div>
-
-
-            </div>
-
-
-            <div class="service-note">
-
-              <strong>Catatan:</strong>
-              Lotus Trans melayani rental Suzuki XL7
-              khusus dengan sopir dan belum menyediakan
-              layanan lepas kunci.
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-
-      </div>
-
+    <div>
+      Rental Suzuki XL7 dengan Sopir
     </div>
 
-  </section>
-
-
-
-  <!-- =======================================================
-       BOOKING STEPS
-  ======================================================== -->
-
-  <section class="steps-section">
-
-    <div class="container">
-
-
-      <div class="section-title text-center">
-
-        <div class="section-label">
-          Cara Booking
-        </div>
-
-        <h2>
-          Mudah untuk Reservasi
-        </h2>
-
-        <p>
-          Sampaikan kebutuhan perjalanan Anda,
-          lalu kami bantu cek ketersediaan dan detail harga.
-        </p>
-
-      </div>
-
-
-
-      <div class="row g-4">
-
-
-        <div class="col-md-4">
-
-          <div class="step-card">
-
-            <div class="step-number">
-              01
-            </div>
-
-            <h3>
-              Hubungi Kami
-            </h3>
-
-            <p>
-              Kirim pesan melalui WhatsApp dan sampaikan
-              tanggal, durasi, serta tujuan perjalanan Anda.
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="col-md-4">
-
-          <div class="step-card">
-
-            <div class="step-number">
-              02
-            </div>
-
-            <h3>
-              Konfirmasi Detail
-            </h3>
-
-            <p>
-              Kami akan membantu mengecek ketersediaan,
-              kebutuhan perjalanan, dan informasi harga.
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="col-md-4">
-
-          <div class="step-card">
-
-            <div class="step-number">
-              03
-            </div>
-
-            <h3>
-              Booking
-            </h3>
-
-            <p>
-              Setelah detail perjalanan disepakati,
-              reservasi dapat dilanjutkan sesuai ketentuan booking.
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
+    <div class="mt-2">
+      © 2026 Lotus Trans. Semua hak dilindungi.
     </div>
 
-  </section>
+  </div>
+
+</footer>
 
 
+<!-- =========================
+     BOOTSTRAP JS
+========================= -->
 
-  <!-- =======================================================
-       CTA
-  ======================================================== -->
-
-  <section class="cta-section">
-
-    <div class="container">
-
-      <div class="cta-box">
-
-        <div class="cta-content">
-
-          <h2>
-            Siap Berangkat Bersama Lotus Trans?
-          </h2>
-
-          <p>
-            Hubungi kami melalui WhatsApp untuk mengecek
-            ketersediaan, harga, dan detail perjalanan Anda.
-          </p>
-
-
-          <a
-            href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
-            target="_blank"
-            rel="noopener"
-            class="btn-main"
-          >
-
-            <span class="wa-icon">
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M20.52 3.48A11.87 11.87 0 0 0 12.04 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.95L.03 24l6.28-1.64a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.43-8.43ZM12.05 21.82h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.87 9.87 0 0 1-1.52-5.29c0-5.47 4.45-9.92 9.93-9.92a9.87 9.87 0 0 1 7.02 2.91 9.88 9.88 0 0 1 2.9 7.03c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
-              </svg>
-
-            </span>
-
-            Tanya & Booking via WhatsApp
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
-
-  <footer>
-
-    <div class="container">
-
-      <div
-        class="d-flex flex-column flex-md-row justify-content-between gap-2"
-      >
-
-        <div>
-
-          <strong>
-            Lotus Trans
-          </strong>
-
-          — Rental Suzuki XL7 dengan Sopir
-
-        </div>
-
-
-        <div>
-
-          © 2026 Lotus Trans. All rights reserved.
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- =======================================================
-       FLOATING WHATSAPP
-  ======================================================== -->
-
-  <a
-    href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
-    target="_blank"
-    rel="noopener"
-    class="wa-float"
-    aria-label="Chat WhatsApp"
-  >
-
-    <span class="wa-icon">
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="27"
-        height="27"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path d="M20.52 3.48A11.87 11.87 0 0 0 12.04 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.95L.03 24l6.28-1.64a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.17-3.43-8.43ZM12.05 21.82h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.87 9.87 0 0 1-1.52-5.29c0-5.47 4.45-9.92 9.93-9.92a9.87 9.87 0 0 1 7.02 2.91 9.88 9.88 0 0 1 2.9 7.03c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
-      </svg>
-
-    </span>
-
-  </a>
-
-
-
-  <!-- =======================================================
-       BOOTSTRAP JS
-  ======================================================== -->
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
 
 </body>
 </html>
