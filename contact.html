@@ -21,8 +21,15 @@
       --accent:#22c55e;
       --shadow:0 22px 60px rgba(0,0,0,.38);
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:Inter,system-ui,sans-serif;
@@ -33,54 +40,150 @@
         linear-gradient(180deg, #040814 0%, var(--bg) 100%);
       overflow-x:hidden;
     }
-    a{text-decoration:none}
+
+    a{
+      text-decoration:none;
+    }
+
     .navbar-blur{
       backdrop-filter:blur(16px);
       background:rgba(5,8,20,.72);
       border-bottom:1px solid var(--line);
     }
-    .brand{font-weight:800;color:var(--text);letter-spacing:-.02em;font-size:1.25rem}
-    .brand span{color:var(--accent)}
-    .nav-link{color:var(--muted)!important;font-weight:600;padding:10px 12px!important}
-    .nav-link:hover,.nav-link.active{color:var(--text)!important}
-    .btn-cta{
-      border:0;border-radius:14px;padding:12px 18px;font-weight:700;
-      display:inline-flex;align-items:center;justify-content:center;width:100%;
+
+    .brand{
+      font-weight:800;
+      color:var(--text);
+      letter-spacing:-.02em;
+      font-size:1.25rem;
     }
+
+    .brand span{
+      color:var(--accent);
+    }
+
+    .nav-link{
+      color:var(--muted)!important;
+      font-weight:600;
+      padding:10px 12px!important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      color:var(--text)!important;
+    }
+
+    .btn-cta{
+      border:0;
+      border-radius:14px;
+      padding:12px 18px;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+    }
+
     .btn-primary-grad{
       background:linear-gradient(135deg,var(--accent),#16a34a);
-      color:#06110b;box-shadow:0 12px 28px rgba(34,197,94,.18);
+      color:#06110b;
+      box-shadow:0 12px 28px rgba(34,197,94,.18);
     }
+
+    .btn-primary-grad:hover{
+      background:linear-gradient(135deg,#32dc70,#16a34a);
+      color:#06110b;
+    }
+
     .btn-soft{
-      background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--text);
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      color:var(--text);
     }
-    .btn-soft:hover{background:rgba(255,255,255,.08);color:var(--text)}
-    .hero{padding:28px 0 34px}
+
+    .btn-soft:hover{
+      background:rgba(255,255,255,.08);
+      color:var(--text);
+    }
+
+    .hero{
+      padding:28px 0 34px;
+    }
+
     .hero-shell{
-      border:1px solid var(--line);border-radius:32px;overflow:hidden;box-shadow:var(--shadow);
-      background:var(--card);backdrop-filter:blur(12px);
+      border:1px solid var(--line);
+      border-radius:32px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:var(--card);
+      backdrop-filter:blur(12px);
     }
-    .contact-card,.form-card{
-      background:var(--card);border:1px solid var(--line);border-radius:28px;
-      box-shadow:var(--shadow);backdrop-filter:blur(12px);height:100%;
+
+    .contact-card,
+    .form-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(12px);
+      height:100%;
     }
+
     .floating-wa{
-      position:fixed;right:18px;bottom:18px;z-index:9999;border-radius:999px;
-      padding:14px 18px;background:linear-gradient(135deg,#25d366,#128c7e);
-      color:#fff;font-weight:700;box-shadow:0 18px 35px rgba(0,0,0,.35);border:0;
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:9999;
+      border-radius:999px;
+      padding:14px 18px;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 18px 35px rgba(0,0,0,.35);
+      border:0;
     }
-    footer{padding:30px 0 44px;color:var(--muted);font-size:14px}
+
+    .floating-wa:hover{
+      color:#fff;
+      transform:translateY(-2px);
+    }
+
+    footer{
+      padding:30px 0 44px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .navbar-toggler{
-      border:1px solid rgba(255,255,255,.18);box-shadow:none !important;border-radius:14px;padding:10px 12px;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:none!important;
+      border-radius:14px;
+      padding:10px 12px;
     }
-    .navbar-toggler:focus{box-shadow:none !important}
-    .form-control,.form-select{
-      background-color:#121b2b;color:var(--text);border:1px solid rgba(255,255,255,.10);
+
+    .navbar-toggler:focus{
+      box-shadow:none!important;
     }
-    .form-control::placeholder{color:#7f8aa3}
-    .form-control:focus,.form-select:focus{
-      background-color:#121b2b;color:var(--text);border-color:var(--accent);box-shadow:none;
+
+    .form-control,
+    .form-select{
+      background-color:#121b2b;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.10);
     }
+
+    .form-control::placeholder{
+      color:#7f8aa3;
+    }
+
+    .form-control:focus,
+    .form-select:focus{
+      background-color:#121b2b;
+      color:var(--text);
+      border-color:var(--accent);
+      box-shadow:none;
+    }
+
     .input-group-text{
       background:#121b2b;
       color:var(--text);
@@ -88,226 +191,394 @@
       border-right:0;
       font-weight:700;
     }
+
     .input-group .form-control{
       border-left:0;
     }
-    @media (min-width: 992px){
-      .navbar-collapse{display:flex!important;justify-content:flex-end}
-      .navbar-nav{align-items:center}
+
+    #formAlert{
+      padding:12px 14px;
+      border-radius:12px;
+      background:rgba(34,197,94,.12);
+      border:1px solid rgba(34,197,94,.25);
+      color:#a7f3c4!important;
     }
-    @media (max-width: 991.98px){
-      .hero-shell{border-radius:24px}
+
+    @media (min-width: 992px){
       .navbar-collapse{
-        margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,20,.85);
+        display:flex!important;
+        justify-content:flex-end;
       }
-      .nav-link{padding:12px 0!important;border-bottom:1px solid rgba(255,255,255,.06)}
-      .navbar-collapse .btn{width:100%;margin-top:10px}
+
+      .navbar-nav{
+        align-items:center;
+      }
+    }
+
+    @media (max-width: 991.98px){
+      .hero-shell{
+        border-radius:24px;
+      }
+
+      .navbar-collapse{
+        margin-top:16px;
+        padding:14px;
+        border:1px solid var(--line);
+        border-radius:18px;
+        background:rgba(5,8,20,.85);
+      }
+
+      .nav-link{
+        padding:12px 0!important;
+        border-bottom:1px solid rgba(255,255,255,.06);
+      }
+
+      .navbar-collapse .btn{
+        width:100%;
+        margin-top:10px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header class="navbar-blur sticky-top">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark py-3">
-      <a class="navbar-brand brand" href="index.html">Lotus<span>Trans</span></a>
-
-      <button class="navbar-toggler ms-auto" type="button"
-              data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
-          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Kontak</a></li>
-          <li class="nav-item mt-3 mt-lg-0">
-            <a class="btn btn-cta btn-primary-grad ms-lg-2"
-               href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20mobil"
-               target="_blank" rel="noopener">
-              Pesan via WhatsApp
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
+  <header class="navbar-blur sticky-top">
     <div class="container">
-      <div class="hero-shell p-4 p-md-5">
-        <h1 class="display-5 fw-bold mb-3">Kontak Kami</h1>
-        <p class="text-white-50 mb-0">Hubungi kami lewat WhatsApp atau telepon untuk cek ketersediaan armada dan booking.</p>
-      </div>
-    </div>
-  </section>
+      <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <a class="navbar-brand brand" href="index.html">
+          Lotus<span>Trans</span>
+        </a>
 
-  <section class="pb-5">
-    <div class="container">
-      <div class="row g-3">
-        <div class="col-lg-5">
-          <div class="contact-card p-4 p-md-5">
-            <h3 class="h4 mb-3">Info Kontak</h3>
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="mb-3">
-              <div class="text-white-50 small mb-2">Telepon</div>
-              <a class="btn btn-cta btn-soft" href="tel:+6283840987113">Hubungi via Telepon</a>
-            </div>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-            <div class="mb-4">
-              <div class="text-white-50 small">Jam Operasional</div>
-              <div class="fw-semibold">Setiap hari, siap bantu booking dan konsultasi perjalanan.</div>
-              <div class="text-white-50 mt-2">Respon cepat untuk cek armada, harga, dan ketersediaan jadwal.</div>
-            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Layanan</a>
+            </li>
 
-            <div class="mb-0">
-              <div class="text-white-50 small mb-2">WhatsApp</div>
-              <a class="btn btn-cta btn-primary-grad"
-                 href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20mobil"
-                 target="_blank" rel="noopener">
-                Chat WhatsApp
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Galeri</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Kontak</a>
+            </li>
+
+            <li class="nav-item mt-3 mt-lg-0">
+              <a
+                class="btn btn-cta btn-primary-grad ms-lg-2"
+                href="https://wa.me/6283840987113?text=Halo%20Lotus%20Trans%2C%20saya%20mau%20booking%20rental%20mobil."
+                target="_blank"
+                rel="noopener"
+              >
+                Pesan via WhatsApp
               </a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
+      </nav>
+    </div>
+  </header>
 
-        <div class="col-lg-7">
-          <div class="form-card p-4 p-md-5">
-            <h3 class="h4 mb-3">Form Booking</h3>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-shell p-4 p-md-5">
+          <h1 class="display-5 fw-bold mb-3">Kontak Kami</h1>
+          <p class="text-white-50 mb-0">
+            Hubungi kami lewat WhatsApp atau telepon untuk cek ketersediaan armada dan booking.
+          </p>
+        </div>
+      </div>
+    </section>
 
-            <form id="bookingForm">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="nama" class="form-label">Nama Anda</label>
-                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama" required>
+    <section class="pb-5">
+      <div class="container">
+        <div class="row g-3">
+
+          <div class="col-lg-5">
+            <div class="contact-card p-4 p-md-5">
+              <h3 class="h4 mb-3">Info Kontak</h3>
+
+              <div class="mb-3">
+                <div class="text-white-50 small mb-2">Telepon</div>
+                <a class="btn btn-cta btn-soft" href="tel:+6283840987113">
+                  Hubungi via Telepon
+                </a>
+              </div>
+
+              <div class="mb-4">
+                <div class="text-white-50 small">Jam Operasional</div>
+                <div class="fw-semibold">
+                  Setiap hari, siap bantu booking dan konsultasi perjalanan.
                 </div>
-
-                <div class="col-md-6">
-                  <label for="no_hp" class="form-label">Nomor HP</label>
-                  <div class="input-group">
-                    <span class="input-group-text">62</span>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="no_hp"
-                      name="no_hp"
-                      placeholder="81234567890"
-                      inputmode="numeric"
-                      pattern="[0-9]{8,13}"
-                      maxlength="13"
-                      required>
-                  </div>
-                  <div class="form-text text-white-50">
-                    Isi tanpa 0 di depan. Contoh: 81234567890
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="tanggal_booking" class="form-label">Tanggal Booking</label>
-                  <input type="date" class="form-control" id="tanggal_booking" name="tanggal_booking" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="jam_booking" class="form-label">Jam Booking</label>
-                  <input type="time" class="form-control" id="jam_booking" name="jam_booking" required>
-                </div>
-
-                <div class="col-12">
-                  <label for="tujuan" class="form-label">Tujuan / Kebutuhan</label>
-                  <input type="text" class="form-control" id="tujuan" name="tujuan" placeholder="Contoh: antar jemput bandara" required>
-                </div>
-
-                <div class="col-12">
-                  <label for="tipe_layanan" class="form-label">Tipe Layanan</label>
-                  <select class="form-select" id="tipe_layanan" name="tipe_layanan">
-                    <option value="">Pilih layanan</option>
-                    <option value="per_jam">Per Jam</option>
-                    <option value="harian">Harian</option>
-                    <option value="luar_kota">Luar Kota</option>
-                    <option value="antar_jemput">Antar Jemput</option>
-                  </select>
-                </div>
-
-                <div class="col-12">
-                  <label for="pesan" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="pesan" name="pesan" rows="5" placeholder="Tulis detail booking Anda"></textarea>
-                </div>
-
-                <div class="col-12">
-                  <button type="submit" class="btn btn-cta btn-primary-grad" id="submitBtn">Kirim Booking</button>
-                </div>
-
-                <div class="col-12">
-                  <div id="formAlert" class="small text-white-50 d-none"></div>
+                <div class="text-white-50 mt-2">
+                  Respon cepat untuk cek armada, harga, dan ketersediaan jadwal.
                 </div>
               </div>
-            </form>
+
+              <div class="mb-0">
+                <div class="text-white-50 small mb-2">WhatsApp</div>
+                <a
+                  class="btn btn-cta btn-primary-grad"
+                  href="https://wa.me/6283840987113?text=Halo%20Lotus%20Trans%2C%20saya%20mau%20booking%20rental%20mobil."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Chat WhatsApp
+                </a>
+              </div>
+            </div>
           </div>
+
+          <div class="col-lg-7">
+            <div class="form-card p-4 p-md-5">
+              <h3 class="h4 mb-3">Form Booking</h3>
+
+              <form id="bookingForm">
+                <div class="row g-3">
+
+                  <div class="col-md-6">
+                    <label for="nama" class="form-label">Nama Anda</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nama"
+                      name="nama"
+                      placeholder="Masukkan nama"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="no_hp" class="form-label">Nomor HP</label>
+
+                    <div class="input-group">
+                      <span class="input-group-text">62</span>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="no_hp"
+                        name="no_hp"
+                        placeholder="81234567890"
+                        inputmode="numeric"
+                        pattern="[0-9]{8,13}"
+                        maxlength="13"
+                        required
+                      >
+                    </div>
+
+                    <div class="form-text text-white-50">
+                      Isi tanpa angka 0 di depan. Contoh: 81234567890
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="tanggal_booking" class="form-label">Tanggal Booking</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="tanggal_booking"
+                      name="tanggal_booking"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="jam_booking" class="form-label">Jam Booking</label>
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="jam_booking"
+                      name="jam_booking"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-12">
+                    <label for="tujuan" class="form-label">Tujuan / Kebutuhan</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="tujuan"
+                      name="tujuan"
+                      placeholder="Contoh: antar jemput Bandara Soekarno-Hatta"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-12">
+                    <label for="tipe_layanan" class="form-label">Tipe Layanan</label>
+                    <select
+                      class="form-select"
+                      id="tipe_layanan"
+                      name="tipe_layanan"
+                      required
+                    >
+                      <option value="">Pilih layanan</option>
+                      <option value="per_jam">Per Jam</option>
+                      <option value="harian">Harian</option>
+                      <option value="luar_kota">Luar Kota</option>
+                      <option value="antar_jemput">Antar Jemput</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="pesan" class="form-label">Pesan Tambahan</label>
+                    <textarea
+                      class="form-control"
+                      id="pesan"
+                      name="pesan"
+                      rows="5"
+                      placeholder="Contoh: Butuh Avanza, 6 penumpang, ada bagasi."
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-cta btn-primary-grad"
+                      id="submitBtn"
+                    >
+                      Kirim Booking ke WhatsApp
+                    </button>
+                  </div>
+
+                  <div class="col-12">
+                    <div id="formAlert" class="small d-none"></div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
+  </main>
+
+  <a
+    class="floating-wa"
+    href="https://wa.me/6283840987113?text=Halo%20Lotus%20Trans%2C%20saya%20mau%20booking%20rental%20mobil."
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp
+  </a>
+
+  <footer>
+    <div class="container">
+      © 2026 Lotus Trans. Semua hak dilindungi.
     </div>
-  </section>
-</main>
+  </footer>
 
-<a class="floating-wa"
-   href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20mobil"
-   target="_blank" rel="noopener">
-  WhatsApp
-</a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<footer>
-  <div class="container">© 2026 Lotus Trans. Semua hak dilindungi.</div>
-</footer>
+  <script>
+    const form = document.getElementById('bookingForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formAlert = document.getElementById('formAlert');
+    const noHpInput = document.getElementById('no_hp');
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbyrwVFm9nfKjJXOuU0DdtfeGLL0vkNNo_EaJaLzy4QWx0uwJbTpslLcZ2cqXlpzd-j2xw/exec';
+    const NOMOR_WA_LOTUS_TRANS = '6283840987113';
 
-const form = document.getElementById('bookingForm');
-const submitBtn = document.getElementById('submitBtn');
-const formAlert = document.getElementById('formAlert');
-const noHpInput = document.getElementById('no_hp');
-
-noHpInput.addEventListener('input', () => {
-  noHpInput.value = noHpInput.value.replace(/\D/g, '');
-});
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Mengirim...';
-  formAlert.classList.add('d-none');
-  formAlert.textContent = '';
-
-  const payload = Object.fromEntries(new FormData(form).entries());
-
-  try {
-    await fetch(ENDPOINT_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8'
-      },
-      body: JSON.stringify(payload)
+    noHpInput.addEventListener('input', () => {
+      noHpInput.value = noHpInput.value.replace(/\D/g, '');
     });
 
-    form.reset();
-    formAlert.textContent = 'Booking berhasil dikirim.';
-    formAlert.classList.remove('d-none');
-  } catch (err) {
-    formAlert.textContent = 'Gagal mengirim booking.';
-    formAlert.classList.remove('d-none');
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Kirim Booking';
-  }
-});
-</script>
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Membuka WhatsApp...';
+
+      formAlert.classList.add('d-none');
+      formAlert.textContent = '';
+
+      const nama = document.getElementById('nama').value.trim();
+      const noHp = document.getElementById('no_hp').value.trim();
+      const tanggal = document.getElementById('tanggal_booking').value;
+      const jam = document.getElementById('jam_booking').value;
+      const tujuan = document.getElementById('tujuan').value.trim();
+      const layanan = document.getElementById('tipe_layanan').value;
+      const pesanTambahan = document.getElementById('pesan').value.trim();
+
+      const layananLabel = {
+        per_jam: 'Per Jam',
+        harian: 'Harian',
+        luar_kota: 'Luar Kota',
+        antar_jemput: 'Antar Jemput'
+      };
+
+      const tanggalIndonesia = new Date(tanggal + 'T00:00:00').toLocaleDateString(
+        'id-ID',
+        {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        }
+      );
+
+      const pesanWA = `Halo Lotus Trans, saya mau booking rental mobil.
+
+*DATA PEMESAN*
+Nama: ${nama}
+Nomor HP: +62${noHp}
+
+*DETAIL BOOKING*
+Tanggal: ${tanggalIndonesia}
+Jam: ${jam}
+Layanan: ${layananLabel[layanan]}
+Tujuan / Kebutuhan: ${tujuan}
+Pesan tambahan: ${pesanTambahan || '-'}
+
+Mohon info ketersediaan armada dan harganya. Terima kasih.`;
+
+      const urlWhatsApp =
+        `https://wa.me/${NOMOR_WA_LOTUS_TRANS}?text=${encodeURIComponent(pesanWA)}`;
+
+      window.open(urlWhatsApp, '_blank', 'noopener');
+
+      formAlert.textContent =
+        'WhatsApp sudah dibuka. Silakan klik tombol Kirim di WhatsApp untuk mengirim booking.';
+
+      formAlert.classList.remove('d-none');
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Kirim Booking ke WhatsApp';
+    });
+  </script>
+
 </body>
 </html>
