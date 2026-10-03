@@ -50,10 +50,14 @@
 
     html{
       scroll-behavior:smooth;
+      overflow-x:hidden;
+      max-width:100%;
     }
 
     body{
       margin:0;
+      width:100%;
+      max-width:100%;
       font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
 
@@ -81,9 +85,9 @@
       text-decoration:none;
     }
 
-
     /* =========================
        NAVBAR
+       TIDAK DIUBAH
     ========================= */
 
     .navbar-blur{
@@ -117,7 +121,6 @@
     .nav-link.active{
       color:var(--text)!important;
     }
-
 
     /* =========================
        BUTTON
@@ -170,26 +173,21 @@
       color:var(--text);
     }
 
-
-    /* =====================================================
-       HOME LOBBY
-    ===================================================== */
+    /* =========================
+       HERO / LOBBY
+    ========================= */
 
     .lobby{
-      min-height:calc(100vh - 89px);
+      min-height:calc(100vh - 88px);
+      padding:22px 0 20px;
 
       display:flex;
       align-items:center;
 
-      padding:22px 0 24px;
+      overflow:hidden;
     }
 
-
     .lobby-shell{
-      position:relative;
-
-      min-height:calc(100vh - 135px);
-
       width:100%;
 
       border:1px solid var(--line);
@@ -202,63 +200,35 @@
 
       background:
         linear-gradient(
-          105deg,
-          rgba(4,8,20,.97) 0%,
-          rgba(4,8,20,.90) 40%,
-          rgba(4,8,20,.62) 67%,
-          rgba(4,8,20,.43) 100%
+          110deg,
+          rgba(4,8,20,.96) 0%,
+          rgba(4,8,20,.82) 48%,
+          rgba(4,8,20,.40) 100%
         ),
         url('https://drive.google.com/thumbnail?id=1h9EMbRgydTTsbEhfU9y0JvR-rcnRlI0c&sz=w2500')
-        center/cover no-repeat;
+        center/cover;
     }
-
-
-    .lobby-shell::after{
-      content:"";
-
-      position:absolute;
-
-      inset:0;
-
-      pointer-events:none;
-
-      background:
-        radial-gradient(
-          circle at 80% 20%,
-          rgba(56,189,248,.12),
-          transparent 26%
-        ),
-        radial-gradient(
-          circle at 90% 80%,
-          rgba(34,197,94,.10),
-          transparent 28%
-        );
-    }
-
 
     .lobby-inner{
-      position:relative;
+      min-height:calc(100vh - 132px);
 
-      z-index:2;
-
-      min-height:calc(100vh - 135px);
-
-      padding:42px;
+      padding:34px;
 
       display:flex;
-
       align-items:center;
+
+      overflow:hidden;
     }
-
-
-    /* =========================
-       LEFT CONTENT
-    ========================= */
 
     .lobby-content{
-      max-width:650px;
+      width:100%;
+      max-width:100%;
+      overflow:hidden;
     }
 
+    /* =========================
+       LOBBY TEXT
+    ========================= */
 
     .pill{
       display:inline-flex;
@@ -267,7 +237,7 @@
 
       align-items:center;
 
-      padding:10px 14px;
+      padding:9px 14px;
 
       border-radius:999px;
 
@@ -278,10 +248,184 @@
       font-size:13px;
 
       color:#dce7f8;
+
+      max-width:100%;
     }
 
+    .lobby-title{
+      font-size:clamp(40px,5vw,66px);
 
-    .pill-dot{
+      line-height:1.03;
+
+      font-weight:800;
+
+      letter-spacing:-.035em;
+
+      margin:17px 0 15px;
+
+      max-width:720px;
+    }
+
+    .lobby-text{
+      color:#d4ddec;
+
+      max-width:620px;
+
+      font-size:17px;
+
+      line-height:1.75;
+
+      margin-bottom:0;
+    }
+
+    /* =========================
+       BUTTON AREA
+    ========================= */
+
+    .lobby-buttons{
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:10px;
+
+      margin-top:24px;
+    }
+
+    /* =========================
+       META
+    ========================= */
+
+    .meta-row{
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:9px;
+
+      margin-top:18px;
+
+      max-width:100%;
+    }
+
+    .meta{
+      padding:9px 13px;
+
+      border-radius:13px;
+
+      background:rgba(255,255,255,.06);
+
+      border:1px solid var(--line);
+
+      font-size:12px;
+
+      color:#dbe5f5;
+    }
+
+    /* =========================
+       VEHICLE CARD
+    ========================= */
+
+    .vehicle-card{
+      background:rgba(7,14,27,.72);
+
+      border:1px solid var(--line);
+
+      border-radius:24px;
+
+      padding:18px;
+
+      box-shadow:
+        0 20px 45px rgba(0,0,0,.28);
+
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+
+      max-width:100%;
+
+      overflow:hidden;
+    }
+
+    .vehicle-label{
+      font-size:11px;
+
+      letter-spacing:.09em;
+
+      text-transform:uppercase;
+
+      color:var(--accent2);
+
+      font-weight:700;
+
+      margin-bottom:4px;
+    }
+
+    .vehicle-title{
+      font-size:20px;
+
+      font-weight:700;
+
+      margin:0;
+    }
+
+    .vehicle-image-wrap{
+      width:100%;
+
+      aspect-ratio:16 / 10;
+
+      margin-top:14px;
+
+      border-radius:18px;
+
+      overflow:hidden;
+
+      border:1px solid rgba(255,255,255,.08);
+
+      background:#07111d;
+    }
+
+    .vehicle-image{
+      width:100%;
+      height:100%;
+
+      display:block;
+
+      object-fit:cover;
+    }
+
+    .vehicle-desc{
+      color:#aebbd0;
+
+      font-size:13px;
+
+      line-height:1.65;
+
+      margin:12px 0 0;
+    }
+
+    /* =========================
+       SMALL INFO
+    ========================= */
+
+    .info-strip{
+      display:flex;
+
+      align-items:center;
+
+      gap:9px;
+
+      margin-top:15px;
+
+      padding-top:14px;
+
+      border-top:1px solid rgba(255,255,255,.07);
+
+      color:#cbd6e7;
+
+      font-size:12px;
+    }
+
+    .info-dot{
       width:7px;
       height:7px;
 
@@ -290,327 +434,13 @@
       background:var(--accent);
 
       box-shadow:
-        0 0 0 4px rgba(34,197,94,.08),
-        0 0 15px rgba(34,197,94,.45);
+        0 0 12px rgba(34,197,94,.55);
+
+      flex:none;
     }
-
-
-    .lobby-title{
-      font-size:clamp(42px,5.3vw,70px);
-
-      line-height:1;
-
-      font-weight:800;
-
-      letter-spacing:-.045em;
-
-      margin:20px 0 18px;
-
-      max-width:10ch;
-    }
-
-
-    .lobby-title span{
-      color:var(--accent);
-    }
-
-
-    .lobby-text{
-      color:#d4ddec;
-
-      max-width:600px;
-
-      font-size:17px;
-
-      line-height:1.75;
-
-      margin:0;
-    }
-
-
-    .lobby-actions{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-      margin-top:28px;
-    }
-
 
     /* =========================
-       QUICK INFO
-    ========================= */
-
-    .quick-info{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:9px;
-
-      margin-top:24px;
-    }
-
-
-    .quick-item{
-      display:flex;
-
-      align-items:center;
-
-      gap:8px;
-
-      padding:9px 12px;
-
-      border-radius:13px;
-
-      background:rgba(255,255,255,.045);
-
-      border:1px solid var(--line);
-
-      color:#dbe5f5;
-
-      font-size:12px;
-    }
-
-
-    .quick-item-icon{
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      width:24px;
-      height:24px;
-
-      border-radius:8px;
-
-      background:rgba(56,189,248,.10);
-
-      border:1px solid rgba(56,189,248,.15);
-
-      font-size:12px;
-    }
-
-
-    /* =========================
-       RIGHT VEHICLE CARD
-    ========================= */
-
-    .vehicle-wrap{
-      display:flex;
-
-      justify-content:flex-end;
-    }
-
-
-    .vehicle-card{
-      width:100%;
-
-      max-width:420px;
-
-      padding:18px;
-
-      border-radius:24px;
-
-      background:var(--card);
-
-      border:1px solid var(--line);
-
-      box-shadow:var(--shadow);
-
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-    }
-
-
-    .vehicle-head{
-      display:flex;
-
-      justify-content:space-between;
-
-      align-items:center;
-
-      margin-bottom:14px;
-    }
-
-
-    .vehicle-label{
-      font-size:11px;
-
-      letter-spacing:.08em;
-
-      text-transform:uppercase;
-
-      color:var(--accent2);
-
-      font-weight:700;
-    }
-
-
-    .vehicle-status{
-      display:flex;
-
-      align-items:center;
-
-      gap:6px;
-
-      font-size:11px;
-
-      color:#8ee5a8;
-    }
-
-
-    .vehicle-status::before{
-      content:"";
-
-      width:6px;
-      height:6px;
-
-      border-radius:50%;
-
-      background:var(--accent);
-
-      box-shadow:
-        0 0 10px rgba(34,197,94,.5);
-    }
-
-
-    .vehicle-image-wrap{
-      position:relative;
-
-      aspect-ratio:16/10;
-
-      overflow:hidden;
-
-      border-radius:17px;
-
-      border:1px solid var(--line);
-    }
-
-
-    .vehicle-image{
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-
-      display:block;
-    }
-
-
-    .vehicle-info{
-      padding-top:16px;
-    }
-
-
-    .vehicle-info h2{
-      font-size:20px;
-
-      font-weight:700;
-
-      letter-spacing:-.03em;
-
-      margin:0;
-    }
-
-
-    .vehicle-info p{
-      color:var(--muted);
-
-      font-size:13px;
-
-      line-height:1.65;
-
-      margin:7px 0 0;
-    }
-
-
-    .vehicle-tags{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:7px;
-
-      margin-top:13px;
-    }
-
-
-    .vehicle-tag{
-      padding:6px 9px;
-
-      border-radius:9px;
-
-      background:rgba(255,255,255,.04);
-
-      border:1px solid var(--line);
-
-      color:#b9c6d9;
-
-      font-size:10px;
-    }
-
-
-    /* =========================
-       LOBBY BOTTOM
-    ========================= */
-
-    .lobby-bottom{
-      position:absolute;
-
-      z-index:3;
-
-      left:42px;
-      right:42px;
-      bottom:20px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
-
-      padding-top:14px;
-
-      border-top:1px solid rgba(255,255,255,.07);
-    }
-
-
-    .lobby-bottom-text{
-      margin:0;
-
-      color:#687990;
-
-      font-size:11px;
-    }
-
-
-    .lobby-bottom-links{
-      display:flex;
-
-      gap:15px;
-    }
-
-
-    .lobby-bottom-links a{
-      color:#718197;
-
-      font-size:11px;
-
-      transition:.2s ease;
-    }
-
-
-    .lobby-bottom-links a:hover{
-      color:var(--text);
-    }
-
-
-    /* =========================
-       WHATSAPP FLOATING BUTTON
+       FLOATING WHATSAPP
     ========================= */
 
     .floating-wa{
@@ -644,16 +474,15 @@
       transition:.2s ease;
     }
 
-
     .floating-wa:hover{
       transform:translateY(-2px);
 
       color:#fff;
     }
 
-
     /* =========================
        FOOTER
+       TIDAK DIUBAH
     ========================= */
 
     footer{
@@ -664,7 +493,6 @@
       font-size:14px;
     }
 
-
     .footer-brand{
       color:var(--text);
 
@@ -673,9 +501,9 @@
       margin-bottom:4px;
     }
 
-
     /* =========================
        NAVBAR TOGGLER
+       TIDAK DIUBAH
     ========================= */
 
     .navbar-toggler{
@@ -688,11 +516,9 @@
       padding:10px 12px;
     }
 
-
     .navbar-toggler:focus{
       box-shadow:none!important;
     }
-
 
     /* =========================
        DESKTOP
@@ -712,9 +538,8 @@
 
     }
 
-
     /* =========================
-       TABLET
+       TABLET / MOBILE
     ========================= */
 
     @media (max-width:991.98px){
@@ -722,44 +547,26 @@
       .lobby{
         min-height:auto;
 
-        padding:16px 0 24px;
-      }
+        padding:16px 0 22px;
 
+        display:block;
+      }
 
       .lobby-shell{
-        min-height:auto;
+        border-radius:28px;
       }
-
 
       .lobby-inner{
         min-height:auto;
 
-        padding:30px 24px 26px;
-      }
+        padding:24px;
 
+        overflow:visible;
+      }
 
       .lobby-title{
         max-width:none;
       }
-
-
-      .vehicle-wrap{
-        justify-content:flex-start;
-
-        margin-top:12px;
-      }
-
-
-      .lobby-bottom{
-        position:relative;
-
-        left:auto;
-        right:auto;
-        bottom:auto;
-
-        margin-top:28px;
-      }
-
 
       .navbar-collapse{
         margin-top:16px;
@@ -773,13 +580,11 @@
         background:rgba(5,8,20,.85);
       }
 
-
       .nav-link{
         padding:12px 0!important;
 
         border-bottom:1px solid rgba(255,255,255,.06);
       }
-
 
       .navbar-collapse .btn{
         width:100%;
@@ -787,154 +592,75 @@
         margin-top:10px;
       }
 
+      .vehicle-card{
+        margin-top:4px;
+      }
+
     }
 
-
     /* =========================
-       MOBILE
+       SMALL MOBILE
     ========================= */
 
     @media (max-width:575.98px){
 
-      .hero{
-        padding-top:16px;
-      }
-
-
       .lobby{
-        padding-top:10px;
+        padding-top:12px;
       }
-
 
       .lobby-shell{
-        border-radius:24px;
-
-        background:
-          linear-gradient(
-            180deg,
-            rgba(4,8,20,.90) 0%,
-            rgba(4,8,20,.97) 100%
-          ),
-          url('https://drive.google.com/thumbnail?id=1h9EMbRgydTTsbEhfU9y0JvR-rcnRlI0c&sz=w2500')
-          center/cover no-repeat;
+        border-radius:22px;
       }
-
 
       .lobby-inner{
-        padding:24px 20px 20px;
+        padding:18px;
       }
-
-
-      .pill{
-        font-size:12px;
-
-        padding:9px 12px;
-      }
-
 
       .lobby-title{
         font-size:clamp(
-          36px,
+          34px,
           11vw,
-          50px
+          46px
         );
 
-        line-height:1.02;
-
-        margin-top:17px;
+        margin-top:15px;
       }
-
 
       .lobby-text{
         font-size:15px;
 
-        line-height:1.7;
+        line-height:1.65;
       }
 
+      .lobby-buttons{
+        flex-direction:column;
 
-      .lobby-actions{
-        display:grid;
-
-        grid-template-columns:1fr 1fr;
-
-        gap:8px;
-      }
-
-
-      .lobby-actions .btn{
         width:100%;
-
-        padding:11px 10px;
-
-        font-size:13px;
       }
 
+      .lobby-buttons .btn{
+        width:100%;
+      }
 
-      .quick-info{
+      .meta-row{
         gap:7px;
-
-        margin-top:20px;
       }
 
+      .meta{
+        font-size:11px;
 
-      .quick-item{
-        padding:8px 9px;
-
-        font-size:10px;
+        padding:8px 10px;
       }
-
-
-      .quick-item-icon{
-        width:21px;
-        height:21px;
-
-        font-size:10px;
-      }
-
-
-      .vehicle-wrap{
-        margin-top:20px;
-      }
-
 
       .vehicle-card{
-        padding:13px;
+        padding:14px;
 
-        border-radius:19px;
+        border-radius:20px;
       }
 
-
-      .vehicle-image-wrap{
-        border-radius:13px;
+      .vehicle-title{
+        font-size:18px;
       }
-
-
-      .vehicle-info{
-        padding-top:13px;
-      }
-
-
-      .vehicle-info h2{
-        font-size:17px;
-      }
-
-
-      .vehicle-info p{
-        font-size:11px;
-      }
-
-
-      .vehicle-tag{
-        font-size:9px;
-
-        padding:5px 7px;
-      }
-
-
-      .lobby-bottom{
-        display:none;
-      }
-
 
       .floating-wa{
         right:14px;
@@ -945,30 +671,27 @@
 
     }
 
-
     /* =========================
-       VERY SMALL MOBILE
+       EXTRA SAFETY
+       MENCEGAH SCROLL SAMPING
     ========================= */
 
-    @media (max-width:380px){
+    .container,
+    .container-fluid,
+    .row{
+      max-width:100%;
+    }
 
-      .lobby-actions{
-        grid-template-columns:1fr;
-      }
-
-
-      .quick-item{
-        width:100%;
-      }
-
+    img,
+    iframe,
+    video{
+      max-width:100%;
     }
 
   </style>
 </head>
 
-
 <body>
-
 
 <!-- =========================
      NAVBAR
@@ -987,7 +710,6 @@
         Lotus<span>Trans</span>
       </a>
 
-
       <button
         class="navbar-toggler ms-auto"
         type="button"
@@ -997,11 +719,8 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-
         <span class="navbar-toggler-icon"></span>
-
       </button>
-
 
       <div
         class="collapse navbar-collapse"
@@ -1010,78 +729,59 @@
 
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
-
           <li class="nav-item">
-
             <a
               class="nav-link active"
               href="index.html"
             >
               Home
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="services.html"
             >
               Layanan
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="pricing.html"
             >
               Pricing
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="gallery.html"
             >
               Galeri
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="faq.html"
             >
               FAQ
             </a>
-
           </li>
 
-
           <li class="nav-item">
-
             <a
               class="nav-link"
               href="contact.html"
             >
               Kontak
             </a>
-
           </li>
-
 
           <li class="nav-item mt-3 mt-lg-0">
 
@@ -1096,7 +796,6 @@
 
           </li>
 
-
         </ul>
 
       </div>
@@ -1108,9 +807,8 @@
 </header>
 
 
-
 <!-- =========================
-     LOBBY UTAMA
+     MAIN / LOBBY
 ========================= -->
 
 <main>
@@ -1123,45 +821,29 @@
 
         <div class="lobby-inner">
 
-          <div class="row g-4 align-items-center w-100">
+          <div class="lobby-content">
 
+            <div class="row g-4 g-lg-5 align-items-center">
 
-            <!-- =====================
-                 KIRI
-            ====================== -->
+              <!-- LEFT -->
 
-            <div class="col-lg-7">
-
-              <div class="lobby-content">
-
+              <div class="col-lg-7">
 
                 <div class="pill">
-
-                  <span class="pill-dot"></span>
-
                   🚘 Suzuki XL7 • Dengan Sopir
-
                 </div>
 
-
                 <h1 class="lobby-title">
-
-                  Rental Suzuki XL7
-                  <span>dengan Sopir</span>
-
+                  Rental Suzuki XL7 dengan Sopir
                 </h1>
 
-
                 <p class="lobby-text">
-
                   Nyaman untuk perjalanan keluarga, kebutuhan bisnis,
-                  antar-jemput, dan perjalanan luar kota.
+                  antar-jemput, dalam kota, maupun perjalanan luar kota.
                   Booking mudah melalui WhatsApp.
-
                 </p>
 
-
-                <div class="lobby-actions">
+                <div class="lobby-buttons">
 
                   <a
                     class="btn btn-cta btn-primary-grad"
@@ -1169,7 +851,6 @@
                   >
                     Booking Sekarang
                   </a>
-
 
                   <a
                     class="btn btn-cta btn-soft"
@@ -1180,77 +861,38 @@
 
                 </div>
 
+                <div class="meta-row">
 
-                <div class="quick-info">
-
-
-                  <div class="quick-item">
-
-                    <span class="quick-item-icon">
-                      🚘
-                    </span>
-
-                    Suzuki XL7
-
+                  <div class="meta">
+                    🚘 Suzuki XL7
                   </div>
 
-
-                  <div class="quick-item">
-
-                    <span class="quick-item-icon">
-                      👨‍✈️
-                    </span>
-
-                    Dengan Sopir
-
+                  <div class="meta">
+                    👨‍✈️ Dengan Sopir
                   </div>
 
-
-                  <div class="quick-item">
-
-                    <span class="quick-item-icon">
-                      📍
-                    </span>
-
-                    Dalam &amp; Luar Kota
-
+                  <div class="meta">
+                    📍 Dalam &amp; Luar Kota
                   </div>
-
 
                 </div>
 
-
               </div>
 
-            </div>
 
+              <!-- RIGHT -->
 
-
-            <!-- =====================
-                 KANAN
-            ====================== -->
-
-            <div class="col-lg-5">
-
-              <div class="vehicle-wrap">
-
+              <div class="col-lg-5">
 
                 <div class="vehicle-card">
 
-
-                  <div class="vehicle-head">
-
-                    <div class="vehicle-label">
-                      Armada Kami
-                    </div>
-
-
-                    <div class="vehicle-status">
-                      Available
-                    </div>
-
+                  <div class="vehicle-label">
+                    Armada Kami
                   </div>
 
+                  <h2 class="vehicle-title">
+                    Suzuki XL7 Manual Hybrid
+                  </h2>
 
                   <div class="vehicle-image-wrap">
 
@@ -1262,85 +904,23 @@
 
                   </div>
 
+                  <p class="vehicle-desc">
+                    SUV modern dan nyaman untuk menemani perjalanan
+                    keluarga maupun kebutuhan perjalanan bisnis.
+                  </p>
 
-                  <div class="vehicle-info">
-
-                    <h2>
-                      Suzuki XL7 Manual Hybrid
-                    </h2>
-
-
-                    <p>
-
-                      SUV modern dan nyaman untuk menemani
-                      perjalanan keluarga maupun kebutuhan
-                      perjalanan bisnis.
-
-                    </p>
-
-
-                    <div class="vehicle-tags">
-
-                      <span class="vehicle-tag">
-                        7 Penumpang
-                      </span>
-
-                      <span class="vehicle-tag">
-                        Nyaman
-                      </span>
-
-                      <span class="vehicle-tag">
-                        Dengan Sopir
-                      </span>
-
-                    </div>
-
+                  <div class="info-strip">
+                    <span class="info-dot"></span>
+                    Layanan tersedia dengan sopir
                   </div>
 
-
                 </div>
-
 
               </div>
 
             </div>
 
-
           </div>
-
-
-
-          <!-- =====================
-               BOTTOM MINI NAV
-          ====================== -->
-
-          <div class="lobby-bottom">
-
-            <p class="lobby-bottom-text">
-
-              © 2026 Lotus Trans. Rental Suzuki XL7 dengan Sopir.
-
-            </p>
-
-
-            <div class="lobby-bottom-links">
-
-              <a href="services.html">
-                Layanan
-              </a>
-
-              <a href="pricing.html">
-                Harga
-              </a>
-
-              <a href="faq.html">
-                FAQ
-              </a>
-
-            </div>
-
-          </div>
-
 
         </div>
 
@@ -1351,7 +931,6 @@
   </section>
 
 </main>
-
 
 
 <!-- =========================
@@ -1366,7 +945,6 @@
 >
   WhatsApp
 </a>
-
 
 
 <!-- =========================
@@ -1394,15 +972,9 @@
 </footer>
 
 
-
-<!-- =========================
-     BOOTSTRAP JS
-========================= -->
-
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 ></script>
-
 
 </body>
 </html>
