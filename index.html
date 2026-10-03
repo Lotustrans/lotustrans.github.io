@@ -2,7 +2,10 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
 
   <title>Lotus Trans | Rental Suzuki XL7 dengan Sopir</title>
 
@@ -11,132 +14,174 @@
     content="Lotus Trans menyediakan rental Suzuki XL7 dengan sopir untuk perjalanan keluarga, bisnis, antar-jemput, dalam kota, dan luar kota."
   />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
-  >
+  />
 
   <style>
-    :root{
-      --bg:#07111d;
-      --bg-dark:#040814;
-      --card:rgba(10,18,33,.76);
+    :root {
+      --bg: #07111d;
+      --bg-dark: #040814;
 
-      --text:#eef4ff;
-      --muted:#9aa8bd;
+      --card: rgba(10, 18, 33, 0.76);
 
-      --line:rgba(255,255,255,.08);
+      --text: #eef4ff;
+      --muted: #9aa8bd;
 
-      --accent:#22c55e;
-      --accent-dark:#16a34a;
-      --accent2:#38bdf8;
+      --line: rgba(255, 255, 255, 0.08);
 
-      --shadow:0 22px 60px rgba(0,0,0,.38);
+      --accent: #22c55e;
+      --accent-dark: #16a34a;
+      --accent2: #38bdf8;
 
-      --radius:24px;
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
+
+      --radius: 24px;
     }
 
-    *{
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
 
       background:
         radial-gradient(
-          circle at top left,
-          rgba(56,189,248,.14),
+          circle at 10% 10%,
+          rgba(56, 189, 248, 0.10),
           transparent 28%
         ),
         radial-gradient(
-          circle at top right,
-          rgba(34,197,94,.10),
-          transparent 26%
+          circle at 90% 80%,
+          rgba(34, 197, 94, 0.08),
+          transparent 30%
         ),
         linear-gradient(
-          180deg,
-          var(--bg-dark) 0%,
-          var(--bg) 100%
+          135deg,
+          #07111d 0%,
+          #050b16 55%,
+          #040814 100%
         );
 
-      overflow-x:hidden;
+      overflow-x: hidden;
     }
 
-    a{
-      text-decoration:none;
+    a {
+      text-decoration: none;
     }
 
     /* =========================
        NAVBAR
     ========================= */
 
-    .navbar-blur{
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
+    .navbar-blur {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-      background:rgba(5,8,20,.72);
+      background: rgba(4, 8, 20, 0.72);
 
-      border-bottom:1px solid var(--line);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--line);
     }
 
-    .brand{
-      font-weight:800;
-      color:var(--text);
-      letter-spacing:-.02em;
-      font-size:1.25rem;
+    .navbar {
+      min-height: 72px;
     }
 
-    .brand span{
-      color:var(--accent);
+    .navbar-brand {
+      color: #ffffff !important;
+
+      font-size: 1.25rem;
+      font-weight: 800;
+
+      letter-spacing: -0.04em;
     }
 
-    .nav-link{
-      color:var(--muted)!important;
-      font-weight:600;
-      padding:10px 12px!important;
-      transition:.2s ease;
+    .navbar-brand span {
+      color: var(--accent);
+    }
+
+    .nav-link {
+      color: #b7c2d4 !important;
+
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      margin: 0 4px;
+
+      transition: 0.25s ease;
     }
 
     .nav-link:hover,
-    .nav-link.active{
-      color:var(--text)!important;
+    .nav-link.active {
+      color: #ffffff !important;
+    }
+
+    .navbar-toggler {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      padding: 8px 10px;
+
+      border-radius: 12px;
+
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
     }
 
     /* =========================
        BUTTON
     ========================= */
 
-    .btn-cta{
-      border:0;
-      border-radius:14px;
+    .btn {
+      border-radius: 14px;
 
-      padding:12px 18px;
+      padding: 12px 18px;
 
-      font-weight:700;
+      font-size: 0.9rem;
+      font-weight: 700;
 
-      transition:.2s ease;
-
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
     }
 
-    .btn-primary-grad{
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary-grad {
+      color: #ffffff;
+
+      border: none;
+
       background:
         linear-gradient(
           135deg,
@@ -144,454 +189,751 @@
           var(--accent-dark)
         );
 
-      color:#06110b;
+      box-shadow:
+        0 10px 28px rgba(34, 197, 94, 0.20);
+    }
+
+    .btn-primary-grad:hover {
+      color: #ffffff;
 
       box-shadow:
-        0 12px 28px rgba(34,197,94,.18);
+        0 14px 34px rgba(34, 197, 94, 0.28);
     }
 
-    .btn-primary-grad:hover{
-      transform:translateY(-1px);
-      color:#06110b;
+    .btn-soft {
+      color: #e9f1ff;
+
+      border: 1px solid rgba(255, 255, 255, 0.10);
+
+      background: rgba(255, 255, 255, 0.055);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
-    .btn-soft{
-      background:rgba(255,255,255,.05);
+    .btn-soft:hover {
+      color: #ffffff;
 
-      border:1px solid var(--line);
+      background: rgba(255, 255, 255, 0.09);
 
-      color:var(--text);
+      border-color: rgba(255, 255, 255, 0.16);
     }
 
-    .btn-soft:hover{
-      background:rgba(255,255,255,.08);
-      color:var(--text);
+    .btn-nav {
+      padding: 9px 15px;
+
+      font-size: 0.82rem;
+
+      border-radius: 12px;
     }
 
     /* =========================
-       HERO
+       MAIN
     ========================= */
 
-    .hero{
-      padding:28px 0 34px;
+    main {
+      min-height: calc(100vh - 72px);
     }
 
-    .hero-shell{
-      border:1px solid var(--line);
+    /* =========================
+       LOBBY HERO
+    ========================= */
 
-      border-radius:32px;
+    .lobby {
+      min-height: calc(100vh - 72px);
 
-      overflow:hidden;
+      display: flex;
+      align-items: center;
 
-      box-shadow:var(--shadow);
+      padding: 22px 0 28px;
+    }
+
+    .hero-shell {
+      position: relative;
+
+      width: 100%;
+
+      min-height: calc(100vh - 122px);
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      border-radius: 30px;
+
+      border: 1px solid rgba(255, 255, 255, 0.09);
+
+      box-shadow: var(--shadow);
 
       background:
         linear-gradient(
-          110deg,
-          rgba(4,8,20,.94) 0%,
-          rgba(4,8,20,.78) 48%,
-          rgba(4,8,20,.38) 100%
+          90deg,
+          rgba(4, 8, 20, 0.97) 0%,
+          rgba(4, 8, 20, 0.88) 42%,
+          rgba(4, 8, 20, 0.52) 70%,
+          rgba(4, 8, 20, 0.68) 100%
         ),
-        url('https://drive.google.com/thumbnail?id=1h9EMbRgydTTsbEhfU9y0JvR-rcnRlI0c&sz=w2500')
-        center/cover;
+        url("https://drive.google.com/thumbnail?id=1h9EMbRgydTTsbEhfU9y0JvR-rcnRlI0c&sz=w2500")
+        center / cover no-repeat;
     }
 
-    .hero-inner{
-      min-height:78vh;
+    .hero-shell::before {
+      content: "";
 
-      padding:32px;
+      position: absolute;
+      inset: 0;
 
-      display:flex;
-      align-items:center;
+      background:
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(56, 189, 248, 0.10),
+          transparent 26%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(34, 197, 94, 0.08),
+          transparent 25%
+        );
+
+      pointer-events: none;
     }
 
-    /* =========================
-       HERO CONTENT
-    ========================= */
+    .hero-inner {
+      position: relative;
+      z-index: 2;
 
-    .pill{
-      display:inline-flex;
+      width: 100%;
 
-      gap:8px;
-
-      align-items:center;
-
-      padding:10px 14px;
-
-      border-radius:999px;
-
-      background:rgba(255,255,255,.05);
-
-      border:1px solid var(--line);
-
-      font-size:13px;
-
-      color:#dce7f8;
-    }
-
-    .hero-title{
-      font-size:clamp(40px,5vw,68px);
-
-      line-height:1.02;
-
-      font-weight:800;
-
-      letter-spacing:-.03em;
-
-      margin:18px 0 16px;
-
-      max-width:11ch;
-    }
-
-    .hero-text{
-      color:#d4ddec;
-
-      max-width:640px;
-
-      font-size:18px;
-
-      line-height:1.8;
-
-      margin-bottom:0;
+      padding: 42px;
     }
 
     /* =========================
-       META
+       HERO LEFT
     ========================= */
 
-    .meta-row{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-      margin-top:20px;
+    .hero-content {
+      max-width: 650px;
     }
 
-    .meta{
-      padding:10px 14px;
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
 
-      border-radius:14px;
+      padding: 8px 13px;
 
-      background:rgba(255,255,255,.06);
+      margin-bottom: 20px;
 
-      border:1px solid var(--line);
+      border-radius: 999px;
 
-      font-size:13px;
+      color: #c9d8ec;
 
-      color:#dbe5f5;
+      font-size: 0.78rem;
+      font-weight: 600;
+
+      border: 1px solid rgba(255, 255, 255, 0.09);
+
+      background: rgba(255, 255, 255, 0.055);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .hero-pill .dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.10),
+        0 0 15px rgba(34, 197, 94, 0.45);
+    }
+
+    .hero-title {
+      margin: 0;
+
+      max-width: 650px;
+
+      font-size: clamp(2.6rem, 5vw, 5rem);
+
+      line-height: 0.98;
+
+      font-weight: 800;
+
+      letter-spacing: -0.065em;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      max-width: 570px;
+
+      margin: 20px 0 0;
+
+      color: var(--muted);
+
+      font-size: 1rem;
+
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 28px;
     }
 
     /* =========================
-       GLASS CARD
+       QUICK INFO
     ========================= */
 
-    .glass-card,
-    .card-soft{
-      background:var(--card);
+    .quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
 
-      border:1px solid var(--line);
-
-      border-radius:var(--radius);
-
-      box-shadow:var(--shadow);
-
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
+      margin-top: 28px;
     }
 
-    .glass-card{
-      transition:.25s ease;
+    .quick-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 9px 12px;
+
+      border-radius: 12px;
+
+      color: #c4d0e2;
+
+      font-size: 0.77rem;
+      font-weight: 500;
+
+      border: 1px solid rgba(255, 255, 255, 0.07);
+
+      background: rgba(255, 255, 255, 0.035);
     }
 
-    .glass-card:hover{
-      transform:translateY(-3px);
-      border-color:rgba(255,255,255,.13);
-    }
+    .quick-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .section-pad{
-      padding:28px 0;
-    }
+      width: 25px;
+      height: 25px;
 
-    .card-soft{
-      height:100%;
+      border-radius: 8px;
 
-      transition:.25s ease;
-    }
+      font-size: 0.75rem;
 
-    .card-soft:hover{
-      transform:translateY(-3px);
+      background: rgba(34, 197, 94, 0.10);
 
-      border-color:rgba(255,255,255,.13);
+      border: 1px solid rgba(34, 197, 94, 0.12);
     }
 
     /* =========================
-       ICON
+       VEHICLE CARD
     ========================= */
 
-    .icon-badge{
-      width:48px;
-      height:48px;
+    .vehicle-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-      border-radius:16px;
+    .vehicle-card {
+      width: 100%;
+      max-width: 420px;
 
-      display:inline-flex;
+      padding: 20px;
 
-      align-items:center;
-      justify-content:center;
+      border-radius: 24px;
 
-      background:rgba(56,189,248,.10);
+      border: 1px solid rgba(255, 255, 255, 0.10);
 
-      border:1px solid rgba(56,189,248,.18);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(14, 25, 43, 0.86),
+          rgba(7, 13, 26, 0.68)
+        );
 
-      margin-bottom:14px;
+      box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.40);
 
-      font-size:20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .vehicle-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 14px;
+    }
+
+    .vehicle-label small {
+      color: #91a2b9;
+
+      font-size: 0.7rem;
+
+      font-weight: 600;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      color: #8ee5a8;
+
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+
+    .status::before {
+      content: "";
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      box-shadow:
+        0 0 10px rgba(34, 197, 94, 0.55);
+    }
+
+    .vehicle-image {
+      width: 100%;
+
+      aspect-ratio: 16 / 10;
+
+      object-fit: cover;
+
+      border-radius: 17px;
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      display: block;
+    }
+
+    .vehicle-info {
+      padding-top: 17px;
+    }
+
+    .vehicle-info h2 {
+      margin: 0;
+
+      font-size: 1.25rem;
+
+      font-weight: 750;
+
+      letter-spacing: -0.035em;
+    }
+
+    .vehicle-info p {
+      margin: 7px 0 0;
+
+      color: var(--muted);
+
+      font-size: 0.78rem;
+
+      line-height: 1.6;
+    }
+
+    .vehicle-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 13px;
+    }
+
+    .vehicle-tag {
+      padding: 6px 9px;
+
+      border-radius: 9px;
+
+      color: #aebdd0;
+
+      font-size: 0.67rem;
+
+      border: 1px solid rgba(255, 255, 255, 0.07);
+
+      background: rgba(255, 255, 255, 0.035);
     }
 
     /* =========================
-       VEHICLE IMAGE
+       MINI FOOTER
     ========================= */
 
-    .vehicle-image{
-      object-fit:cover;
+    .mini-footer {
+      position: absolute;
 
-      width:100%;
-      height:100%;
+      bottom: 17px;
+      left: 42px;
+      right: 42px;
 
-      display:block;
+      z-index: 5;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding-top: 13px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .mini-footer p {
+      margin: 0;
+
+      color: #687990;
+
+      font-size: 0.68rem;
+    }
+
+    .mini-footer-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .mini-footer-links a {
+      color: #718197;
+
+      font-size: 0.68rem;
+
+      transition: 0.2s ease;
+    }
+
+    .mini-footer-links a:hover {
+      color: #ffffff;
     }
 
     /* =========================
-       SMALL LABEL
+       FLOATING WHATSAPP
     ========================= */
 
-    .section-label{
-      font-size:12px;
+    .wa-float {
+      position: fixed;
 
-      letter-spacing:.08em;
+      right: 22px;
+      bottom: 22px;
 
-      text-transform:uppercase;
+      z-index: 1100;
 
-      color:var(--accent2);
+      width: 54px;
+      height: 54px;
 
-      font-weight:700;
-    }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    /* =========================
-       WHATSAPP FLOATING BUTTON
-    ========================= */
+      border-radius: 50%;
 
-    .floating-wa{
-      position:fixed;
+      color: #ffffff;
 
-      right:18px;
-      bottom:18px;
-
-      z-index:9999;
-
-      border-radius:999px;
-
-      padding:14px 18px;
+      font-size: 1.35rem;
 
       background:
         linear-gradient(
           135deg,
-          #25d366,
-          #128c7e
+          #22c55e,
+          #16a34a
         );
-
-      color:#fff;
-
-      font-weight:700;
 
       box-shadow:
-        0 18px 35px rgba(0,0,0,.35);
+        0 14px 35px rgba(0, 0, 0, 0.35),
+        0 8px 25px rgba(34, 197, 94, 0.20);
 
-      border:0;
-
-      transition:.2s ease;
+      transition: 0.25s ease;
     }
 
-    .floating-wa:hover{
-      transform:translateY(-2px);
+    .wa-float:hover {
+      color: #ffffff;
 
-      color:#fff;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer{
-      padding:30px 0 44px;
-
-      color:var(--muted);
-
-      font-size:14px;
-    }
-
-    .footer-brand{
-      color:var(--text);
-
-      font-weight:700;
-
-      margin-bottom:4px;
+      transform: translateY(-4px) scale(1.03);
     }
 
     /* =========================
-       NAVBAR TOGGLER
+       TABLET
     ========================= */
 
-    .navbar-toggler{
-      border:1px solid rgba(255,255,255,.18);
+    @media (max-width: 991.98px) {
 
-      box-shadow:none!important;
+      .lobby {
+        min-height: auto;
 
-      border-radius:14px;
-
-      padding:10px 12px;
-    }
-
-    .navbar-toggler:focus{
-      box-shadow:none!important;
-    }
-
-    /* =========================
-       DESKTOP
-    ========================= */
-
-    @media (min-width:992px){
-
-      .navbar-collapse{
-        display:flex!important;
-
-        justify-content:flex-end;
+        padding: 16px 0 22px;
       }
 
-      .navbar-nav{
-        align-items:center;
+      .hero-shell {
+        min-height: calc(100vh - 110px);
+
+        background:
+          linear-gradient(
+            180deg,
+            rgba(4, 8, 20, 0.88) 0%,
+            rgba(4, 8, 20, 0.94) 100%
+          ),
+          url("https://drive.google.com/thumbnail?id=1h9EMbRgydTTsbEhfU9y0JvR-rcnRlI0c&sz=w2500")
+          center / cover no-repeat;
       }
 
-    }
-
-    /* =========================
-       TABLET / MOBILE
-    ========================= */
-
-    @media (max-width:991.98px){
-
-      .hero-inner{
-        min-height:auto;
-
-        padding:24px;
+      .hero-inner {
+        padding: 34px;
       }
 
-      .hero-title{
-        max-width:none;
+      .vehicle-wrap {
+        justify-content: flex-start;
+
+        margin-top: 28px;
       }
 
-      .navbar-collapse{
-        margin-top:16px;
-
-        padding:14px;
-
-        border:1px solid var(--line);
-
-        border-radius:18px;
-
-        background:rgba(5,8,20,.85);
+      .vehicle-card {
+        max-width: 470px;
       }
 
-      .nav-link{
-        padding:12px 0!important;
+      .mini-footer {
+        position: relative;
 
-        border-bottom:1px solid rgba(255,255,255,.06);
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 30px;
       }
-
-      .navbar-collapse .btn{
-        width:100%;
-
-        margin-top:10px;
-      }
-
     }
 
     /* =========================
-       SMALL MOBILE
+       MOBILE
     ========================= */
 
-    @media (max-width:575.98px){
+    @media (max-width: 767.98px) {
 
-      .hero{
-        padding-top:16px;
+      .navbar {
+        min-height: 64px;
       }
 
-      .hero-shell{
-        border-radius:24px;
+      .navbar-collapse {
+        margin-top: 10px;
+
+        padding: 12px;
+
+        border-radius: 18px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        background: rgba(5, 10, 22, 0.94);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
       }
 
-      .hero-inner{
-        padding:20px;
+      .navbar-nav {
+        gap: 3px;
       }
 
-      .hero-title{
-        font-size:clamp(
-          34px,
-          11vw,
-          48px
-        );
+      .nav-link {
+        padding: 9px 10px !important;
+
+        border-radius: 10px;
       }
 
-      .hero-text{
-        font-size:16px;
-
-        line-height:1.7;
+      .nav-link:hover {
+        background: rgba(255, 255, 255, 0.05);
       }
 
-      .meta{
-        font-size:12px;
+      .navbar .btn-nav {
+        width: 100%;
 
-        padding:9px 12px;
+        margin-top: 8px;
       }
 
-      .floating-wa{
-        right:14px;
-        bottom:14px;
-
-        padding:13px 16px;
+      .lobby {
+        padding: 10px 0 14px;
       }
 
+      .hero-shell {
+        min-height: auto;
+
+        border-radius: 22px;
+      }
+
+      .hero-inner {
+        padding: 25px 20px 20px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-pill {
+        margin-bottom: 16px;
+
+        font-size: 0.72rem;
+      }
+
+      .hero-title {
+        font-size: clamp(2.35rem, 12vw, 3.4rem);
+
+        line-height: 1;
+
+        letter-spacing: -0.06em;
+      }
+
+      .hero-subtitle {
+        margin-top: 16px;
+
+        font-size: 0.87rem;
+
+        line-height: 1.65;
+      }
+
+      .hero-actions {
+        margin-top: 22px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 9px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+
+        padding: 11px 10px;
+
+        font-size: 0.78rem;
+      }
+
+      .quick-info {
+        gap: 7px;
+
+        margin-top: 20px;
+      }
+
+      .quick-item {
+        padding: 8px 9px;
+
+        font-size: 0.67rem;
+      }
+
+      .quick-icon {
+        width: 22px;
+        height: 22px;
+
+        font-size: 0.65rem;
+      }
+
+      .vehicle-wrap {
+        margin-top: 23px;
+      }
+
+      .vehicle-card {
+        padding: 13px;
+
+        border-radius: 19px;
+      }
+
+      .vehicle-image {
+        border-radius: 13px;
+      }
+
+      .vehicle-info {
+        padding-top: 13px;
+      }
+
+      .vehicle-info h2 {
+        font-size: 1rem;
+      }
+
+      .vehicle-info p {
+        font-size: 0.72rem;
+      }
+
+      .vehicle-tag {
+        font-size: 0.61rem;
+
+        padding: 5px 7px;
+      }
+
+      .mini-footer {
+        display: none;
+      }
+
+      .wa-float {
+        width: 48px;
+        height: 48px;
+
+        right: 16px;
+        bottom: 16px;
+
+        font-size: 1.15rem;
+      }
+    }
+
+    /* =========================
+       VERY SMALL MOBILE
+    ========================= */
+
+    @media (max-width: 380px) {
+
+      .hero-inner {
+        padding: 22px 16px 18px;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-item {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+  <!-- =========================
+       NAVBAR
+  ========================= -->
 
-<header class="navbar-blur sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-blur">
+    <div class="container">
 
-  <div class="container">
-
-    <nav class="navbar navbar-expand-lg navbar-dark py-3">
-
-      <a
-        class="navbar-brand brand"
-        href="index.html"
-      >
+      <a class="navbar-brand" href="index.html">
         Lotus<span>Trans</span>
       </a>
 
       <button
-        class="navbar-toggler ms-auto"
+        class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
@@ -600,10 +942,10 @@
 
       <div
         class="collapse navbar-collapse"
-        id="mainNav"
+        id="mainNavbar"
       >
 
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
 
           <li class="nav-item">
             <a
@@ -659,145 +1001,197 @@
             </a>
           </li>
 
-          <li class="nav-item mt-3 mt-lg-0">
-
+          <li class="nav-item ms-lg-2">
             <a
-              class="btn btn-cta btn-primary-grad ms-lg-2"
-              href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
-              target="_blank"
-              rel="noopener"
+              class="btn btn-primary-grad btn-nav"
+              href="contact.html"
             >
               Pesan via WhatsApp
             </a>
-
           </li>
 
         </ul>
 
       </div>
-
-    </nav>
-
-  </div>
-
-</header>
+    </div>
+  </nav>
 
 
-<!-- =========================
-     MAIN
-========================= -->
+  <!-- =========================
+       MAIN
+  ========================= -->
 
-<main>
+  <main>
 
-  <!-- HERO -->
+    <section class="lobby">
 
-  <section class="hero">
+      <div class="container">
 
-    <div class="container">
+        <div class="hero-shell">
 
-      <div class="hero-shell">
+          <div class="hero-inner">
 
-        <div class="hero-inner">
+            <div class="row align-items-center g-4">
 
-          <div class="row g-4 align-items-center w-100">
+              <!-- =========================
+                   LEFT CONTENT
+              ========================= -->
 
-            <!-- LEFT -->
+              <div class="col-lg-7">
 
-            <div class="col-lg-7">
+                <div class="hero-content">
 
-              <div class="pill">
-                🚘 Suzuki XL7 • Dengan Sopir
-              </div>
-
-              <h1 class="hero-title">
-                Rental Suzuki XL7 dengan Sopir
-              </h1>
-
-              <p class="hero-text">
-                Nyaman untuk perjalanan keluarga, kebutuhan bisnis,
-                antar-jemput, dan perjalanan luar kota.
-                Booking mudah melalui WhatsApp.
-              </p>
-
-
-              <div class="d-flex flex-wrap gap-2 mt-4">
-
-                <a
-                  class="btn btn-cta btn-primary-grad"
-                  href="contact.html"
-                >
-                  Booking Sekarang
-                </a>
-
-                <a
-                  class="btn btn-cta btn-soft"
-                  href="pricing.html"
-                >
-                  Lihat Harga
-                </a>
-
-              </div>
-
-
-              <div class="meta-row">
-
-                <div class="meta">
-                  Per Jam
-                </div>
-
-                <div class="meta">
-                  Harian
-                </div>
-
-                <div class="meta">
-                  Dalam Kota
-                </div>
-
-                <div class="meta">
-                  Luar Kota
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <!-- RIGHT -->
-
-            <div class="col-lg-5">
-
-              <div class="glass-card p-4">
-
-                <div class="mb-3">
-
-                  <div class="section-label">
-                    Armada Kami
+                  <div class="hero-pill">
+                    <span class="dot"></span>
+                    🚘 Suzuki XL7 • Dengan Sopir
                   </div>
 
-                  <h2 class="h4 mb-0 mt-1">
-                    Suzuki XL7 Manual Hybrid
-                  </h2>
+                  <h1 class="hero-title">
+                    Rental Suzuki XL7
+                    <span>dengan Sopir</span>
+                  </h1>
+
+                  <p class="hero-subtitle">
+                    Nyaman untuk perjalanan keluarga, kebutuhan bisnis,
+                    antar-jemput, dan perjalanan luar kota.
+                    Booking mudah melalui WhatsApp.
+                  </p>
+
+                  <div class="hero-actions">
+
+                    <a
+                      href="contact.html"
+                      class="btn btn-primary-grad"
+                    >
+                      Booking Sekarang
+                    </a>
+
+                    <a
+                      href="pricing.html"
+                      class="btn btn-soft"
+                    >
+                      Lihat Harga
+                    </a>
+
+                  </div>
+
+
+                  <!-- QUICK INFO -->
+
+                  <div class="quick-info">
+
+                    <div class="quick-item">
+                      <span class="quick-icon">🚘</span>
+                      Suzuki XL7
+                    </div>
+
+                    <div class="quick-item">
+                      <span class="quick-icon">👨‍✈️</span>
+                      Dengan Sopir
+                    </div>
+
+                    <div class="quick-item">
+                      <span class="quick-icon">📍</span>
+                      Dalam &amp; Luar Kota
+                    </div>
+
+                  </div>
 
                 </div>
 
+              </div>
 
-                <div
-                  class="ratio ratio-4x3 rounded-4 overflow-hidden border border-light border-opacity-10 mb-3"
-                >
 
-                  <img
-                    src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
-                    alt="Suzuki XL7 Lotus Trans"
-                    class="vehicle-image"
-                  >
+              <!-- =========================
+                   RIGHT VEHICLE CARD
+              ========================= -->
+
+              <div class="col-lg-5">
+
+                <div class="vehicle-wrap">
+
+                  <div class="vehicle-card">
+
+                    <div class="vehicle-label">
+
+                      <small>
+                        Armada Kami
+                      </small>
+
+                      <span class="status">
+                        Available
+                      </span>
+
+                    </div>
+
+                    <img
+                      src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
+                      class="vehicle-image"
+                      alt="Suzuki XL7 Lotus Trans"
+                    />
+
+                    <div class="vehicle-info">
+
+                      <h2>
+                        Suzuki XL7 Manual Hybrid
+                      </h2>
+
+                      <p>
+                        SUV modern dan nyaman untuk menemani
+                        perjalanan keluarga maupun kebutuhan
+                        perjalanan bisnis.
+                      </p>
+
+                      <div class="vehicle-tags">
+
+                        <span class="vehicle-tag">
+                          7 Penumpang
+                        </span>
+
+                        <span class="vehicle-tag">
+                          Nyaman
+                        </span>
+
+                        <span class="vehicle-tag">
+                          Dengan Sopir
+                        </span>
+
+                      </div>
+
+                    </div>
+
+                  </div>
 
                 </div>
 
+              </div>
 
-                <p class="mb-0 text-white-50">
-                  SUV modern dan nyaman untuk menemani perjalanan
-                  keluarga maupun kebutuhan perjalanan bisnis.
-                </p>
+            </div>
+
+
+            <!-- =========================
+                 MINI FOOTER
+            ========================= -->
+
+            <div class="mini-footer">
+
+              <p>
+                © 2026 Lotus Trans. Rental Suzuki XL7 dengan Sopir.
+              </p>
+
+              <div class="mini-footer-links">
+
+                <a href="services.html">
+                  Layanan
+                </a>
+
+                <a href="pricing.html">
+                  Harga
+                </a>
+
+                <a href="faq.html">
+                  FAQ
+                </a>
 
               </div>
 
@@ -809,147 +1203,34 @@
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
-
-
-  <!-- BENEFITS -->
-
-  <section class="section-pad">
-
-    <div class="container">
-
-      <div class="row g-3">
+  </main>
 
 
-        <!-- CARD 1 -->
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
 
-        <div class="col-md-4">
-
-          <div class="card-soft p-4">
-
-            <div class="icon-badge">
-              🚘
-            </div>
-
-            <h3 class="h5">
-              Suzuki XL7
-            </h3>
-
-            <p class="mb-0 text-white-50">
-              Armada yang nyaman untuk perjalanan keluarga,
-              kebutuhan bisnis, maupun perjalanan luar kota.
-            </p>
-
-          </div>
-
-        </div>
+  <a
+    href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+    class="wa-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Booking melalui WhatsApp"
+    title="Booking via WhatsApp"
+  >
+    ☎
+  </a>
 
 
-        <!-- CARD 2 -->
+  <!-- =========================
+       BOOTSTRAP JS
+  ========================= -->
 
-        <div class="col-md-4">
-
-          <div class="card-soft p-4">
-
-            <div class="icon-badge">
-              👨‍✈️
-            </div>
-
-            <h3 class="h5">
-              Dengan Sopir
-            </h3>
-
-            <p class="mb-0 text-white-50">
-              Perjalanan lebih praktis tanpa perlu menyetir sendiri.
-              Sopir siap membantu perjalanan Anda.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- CARD 3 -->
-
-        <div class="col-md-4">
-
-          <div class="card-soft p-4">
-
-            <div class="icon-badge">
-              📍
-            </div>
-
-            <h3 class="h5">
-              Layanan Fleksibel
-            </h3>
-
-            <p class="mb-0 text-white-50">
-              Tersedia untuk perjalanan per jam, harian,
-              dalam kota, hingga luar kota.
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
-
-<a
-  class="floating-wa"
-  href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
-  target="_blank"
-  rel="noopener"
->
-  WhatsApp
-</a>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-brand">
-      Lotus Trans
-    </div>
-
-    <div>
-      Rental Suzuki XL7 dengan Sopir
-    </div>
-
-    <div class="mt-2">
-      © 2026 Lotus Trans. Semua hak dilindungi.
-    </div>
-
-  </div>
-
-</footer>
-
-
-<!-- =========================
-     BOOTSTRAP JS
-========================= -->
-
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
 
 </body>
 </html>
