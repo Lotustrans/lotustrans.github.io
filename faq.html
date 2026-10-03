@@ -1,86 +1,973 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
   <title>FAQ | Lotus Trans</title>
-  <meta name="description" content="Pertanyaan yang sering ditanyakan tentang Lotus Trans." />
+
+  <meta
+    name="description"
+    content="Pertanyaan yang sering ditanyakan tentang rental Suzuki XL7 Lotus Trans dengan sopir."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
   <style>
-    :root{--bg:#07111d;--card:rgba(10,18,33,.76);--text:#eef4ff;--muted:#9aa8bd;--line:rgba(255,255,255,.08);--accent:#22c55e;--shadow:0 22px 60px rgba(0,0,0,.38);--radius:24px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);background:linear-gradient(180deg,#040814 0%,var(--bg) 100%);overflow-x:hidden}
-    a{text-decoration:none}
-    .navbar-blur{backdrop-filter:blur(16px);background:rgba(5,8,20,.72);border-bottom:1px solid var(--line)}
-    .brand{font-weight:800;color:var(--text);letter-spacing:-.02em;font-size:1.25rem}
-    .brand span{color:var(--accent)}
-    .nav-link{color:var(--muted)!important;font-weight:600;padding:10px 12px!important}
-    .nav-link:hover,.nav-link.active{color:var(--text)!important}
-    .btn-cta{border:0;border-radius:14px;padding:12px 18px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
-    .btn-primary-grad{background:linear-gradient(135deg,var(--accent),#16a34a);color:#06110b}
-    .hero{padding:34px 0 24px}
-    .box,.faq-card{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
-    .accordion-item{background:transparent;border:1px solid var(--line);border-radius:18px;overflow:hidden}
-    .accordion-button{background:transparent;color:var(--text);font-weight:700}
-    .accordion-button:not(.collapsed){background:rgba(255,255,255,.04);color:var(--text);box-shadow:none}
-    .accordion-button:focus{box-shadow:none;border-color:var(--line)}
-    .accordion-body{color:var(--muted)}
-    .floating-wa{position:fixed;right:18px;bottom:18px;z-index:9999;border-radius:999px;padding:14px 18px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;font-weight:700;box-shadow:0 18px 35px rgba(0,0,0,.35);border:0}
-    footer{padding:30px 0 44px;color:var(--muted);font-size:14px}
-    .navbar-toggler{border:1px solid rgba(255,255,255,.18);box-shadow:none !important;border-radius:14px;padding:10px 12px}
-    .navbar-toggler:focus{box-shadow:none !important}
-    @media (min-width: 992px){.navbar-collapse{display:flex!important;justify-content:flex-end}.navbar-nav{align-items:center}}
-    @media (max-width: 991.98px){.navbar-collapse{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:18px;background:rgba(5,8,20,.85)}.nav-link{padding:12px 0!important;border-bottom:1px solid rgba(255,255,255,.06)}.navbar-collapse .btn{width:100%;margin-top:10px}}
+    :root{
+      --bg:#07111d;
+      --bg-dark:#040814;
+      --card:rgba(10,18,33,.76);
+      --card-soft:rgba(255,255,255,.035);
+      --text:#eef4ff;
+      --muted:#9aa8bd;
+      --line:rgba(255,255,255,.08);
+      --accent:#22c55e;
+      --accent-dark:#16a34a;
+      --cyan:#38bdf8;
+      --shadow:0 22px 60px rgba(0,0,0,.38);
+      --radius:24px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 85% 10%, rgba(34,197,94,.07), transparent 28%),
+        radial-gradient(circle at 10% 35%, rgba(56,189,248,.05), transparent 25%),
+        linear-gradient(180deg,#040814 0%,var(--bg) 100%);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-blur{
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      background:rgba(5,8,20,.72);
+      border-bottom:1px solid var(--line);
+    }
+
+    .brand{
+      font-weight:800;
+      color:var(--text);
+      letter-spacing:-.02em;
+      font-size:1.25rem;
+    }
+
+    .brand span{
+      color:var(--accent);
+    }
+
+    .nav-link{
+      color:var(--muted)!important;
+      font-weight:600;
+      padding:10px 12px!important;
+      transition:.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      color:var(--text)!important;
+    }
+
+    .btn-cta{
+      border:0;
+      border-radius:14px;
+      padding:12px 18px;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      transition:.2s ease;
+    }
+
+    .btn-primary-grad{
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      color:#06110b;
+    }
+
+    .btn-primary-grad:hover{
+      color:#06110b;
+      transform:translateY(-1px);
+      box-shadow:0 10px 24px rgba(34,197,94,.18);
+    }
+
+    /* =========================
+       PAGE HEADER
+    ========================= */
+
+    .page-header{
+      padding:56px 0 30px;
+    }
+
+    .page-header-box{
+      position:relative;
+      overflow:hidden;
+      padding:42px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    .page-header-box::before{
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      right:-100px;
+      top:-130px;
+      background:rgba(34,197,94,.09);
+      border-radius:50%;
+      filter:blur(8px);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:14px;
+      color:var(--accent);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:24px;
+      height:2px;
+      background:var(--accent);
+      border-radius:99px;
+    }
+
+    .page-header h1{
+      position:relative;
+      margin:0 0 14px;
+      font-size:clamp(2rem,4vw,3.15rem);
+      line-height:1.08;
+      letter-spacing:-.04em;
+      font-weight:800;
+    }
+
+    .page-header p{
+      position:relative;
+      max-width:720px;
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+      line-height:1.8;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq-section{
+      padding:8px 0 70px;
+    }
+
+    .section-label{
+      color:var(--cyan);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .section-title{
+      font-size:1.65rem;
+      font-weight:800;
+      letter-spacing:-.03em;
+      margin-bottom:8px;
+    }
+
+    .section-description{
+      color:var(--muted);
+      line-height:1.7;
+      margin-bottom:26px;
+    }
+
+    .faq-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .accordion-item{
+      background:rgba(10,18,33,.72);
+      border:1px solid var(--line);
+      border-radius:18px!important;
+      overflow:hidden;
+      box-shadow:0 12px 35px rgba(0,0,0,.16);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    .accordion-button{
+      background:transparent;
+      color:var(--text);
+      font-weight:700;
+      font-size:.98rem;
+      padding:20px 22px;
+    }
+
+    .accordion-button:not(.collapsed){
+      background:rgba(255,255,255,.035);
+      color:var(--text);
+      box-shadow:none;
+    }
+
+    .accordion-button::after{
+      filter:invert(1);
+      opacity:.65;
+    }
+
+    .accordion-button:focus{
+      box-shadow:none;
+      border-color:var(--line);
+    }
+
+    .accordion-body{
+      padding:0 22px 21px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:.94rem;
+    }
+
+    /* =========================
+       INFO CARDS
+    ========================= */
+
+    .info-card{
+      height:100%;
+      padding:24px;
+      background:rgba(10,18,33,.68);
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:0 16px 45px rgba(0,0,0,.2);
+    }
+
+    .info-icon{
+      width:42px;
+      height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:13px;
+      background:rgba(34,197,94,.10);
+      border:1px solid rgba(34,197,94,.16);
+      color:var(--accent);
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    .info-card h3{
+      font-size:1rem;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    .info-card p{
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.7;
+      margin:0;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-card{
+      position:relative;
+      overflow:hidden;
+      margin-top:34px;
+      padding:30px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,197,94,.10),
+          rgba(10,18,33,.72) 55%
+        );
+      border:1px solid rgba(34,197,94,.16);
+      border-radius:24px;
+    }
+
+    .cta-card::after{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      right:-100px;
+      bottom:-120px;
+      border-radius:50%;
+      background:rgba(34,197,94,.08);
+      filter:blur(5px);
+    }
+
+    .cta-card h2{
+      position:relative;
+      z-index:1;
+      font-size:1.35rem;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    .cta-card p{
+      position:relative;
+      z-index:1;
+      color:var(--muted);
+      margin-bottom:20px;
+      line-height:1.7;
+    }
+
+    .cta-card .btn{
+      position:relative;
+      z-index:1;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-wa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:9999;
+      border-radius:999px;
+      padding:14px 18px;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 18px 35px rgba(0,0,0,.35);
+      border:0;
+      transition:.2s ease;
+    }
+
+    .floating-wa:hover{
+      color:#fff;
+      transform:translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      padding:30px 0 44px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* =========================
+       MOBILE NAV
+    ========================= */
+
+    .navbar-toggler{
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:none!important;
+      border-radius:14px;
+      padding:10px 12px;
+    }
+
+    .navbar-toggler:focus{
+      box-shadow:none!important;
+    }
+
+    @media (min-width:992px){
+      .navbar-collapse{
+        display:flex!important;
+        justify-content:flex-end;
+      }
+
+      .navbar-nav{
+        align-items:center;
+      }
+    }
+
+    @media (max-width:991.98px){
+      .navbar-collapse{
+        margin-top:16px;
+        padding:14px;
+        border:1px solid var(--line);
+        border-radius:18px;
+        background:rgba(5,8,20,.85);
+      }
+
+      .nav-link{
+        padding:12px 0!important;
+        border-bottom:1px solid rgba(255,255,255,.06);
+      }
+
+      .navbar-collapse .btn{
+        width:100%;
+        margin-top:10px;
+      }
+    }
+
+    @media (max-width:767.98px){
+
+      .page-header{
+        padding:34px 0 22px;
+      }
+
+      .page-header-box{
+        padding:28px 22px;
+        border-radius:24px;
+      }
+
+      .page-header h1{
+        font-size:2rem;
+      }
+
+      .faq-section{
+        padding-bottom:55px;
+      }
+
+      .accordion-button{
+        padding:18px;
+        font-size:.94rem;
+      }
+
+      .accordion-body{
+        padding:0 18px 18px;
+        font-size:.9rem;
+      }
+
+      .info-card{
+        padding:21px;
+      }
+
+      .cta-card{
+        padding:24px 21px;
+      }
+
+      .floating-wa{
+        right:14px;
+        bottom:14px;
+        padding:13px 16px;
+        font-size:.9rem;
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <header class="navbar-blur sticky-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
-      <a class="navbar-brand brand" href="index.html">Lotus<span>Trans</span></a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+      <a class="navbar-brand brand" href="index.html">
+        Lotus<span>Trans</span>
+      </a>
+
+      <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li><li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li><li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li><li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
-          <li class="nav-item mt-3 mt-lg-0"><a class="btn btn-cta btn-primary-grad ms-lg-2" href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20mobil" target="_blank" rel="noopener">Pesan via WhatsApp</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Layanan</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Galeri</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="faq.html">FAQ</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontak</a>
+          </li>
+
+          <li class="nav-item mt-3 mt-lg-0">
+            <a
+              class="btn btn-cta btn-primary-grad ms-lg-2"
+              href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+              target="_blank"
+              rel="noopener"
+            >
+              Pesan via WhatsApp
+            </a>
+          </li>
+
         </ul>
       </div>
+
     </nav>
   </div>
 </header>
+
+
 <main>
-  <section class="hero">
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
     <div class="container">
-      <div class="box p-4 p-md-5">
-        <h1 class="display-5 fw-bold mb-3">FAQ</h1>
-        <p class="text-white-50 mb-0">Jawaban singkat buat pertanyaan yang paling sering ditanya.</p>
+
+      <div class="page-header-box">
+
+        <div class="eyebrow">
+          Informasi
+        </div>
+
+        <h1>
+          Pertanyaan yang Sering Ditanyakan
+        </h1>
+
+        <p>
+          Temukan informasi seputar rental Suzuki XL7 Lotus Trans,
+          layanan dengan sopir, perjalanan luar kota, hingga proses booking.
+        </p>
+
       </div>
+
     </div>
   </section>
-  <section class="pb-5">
+
+
+  <!-- FAQ UTAMA -->
+  <section class="faq-section">
+
     <div class="container">
-      <div class="accordion d-grid gap-3" id="faqAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">Apakah tersedia dengan sopir?</button></h2>
-          <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Ya, semua paket bisa dengan sopir profesional.</div></div>
+
+      <div class="row g-4">
+
+        <!-- FAQ -->
+        <div class="col-lg-8">
+
+          <div class="section-label">
+            FAQ
+          </div>
+
+          <h2 class="section-title">
+            Sebelum melakukan booking
+          </h2>
+
+          <p class="section-description">
+            Beberapa informasi penting yang perlu diketahui sebelum
+            menggunakan layanan Lotus Trans.
+          </p>
+
+
+          <div class="faq-list" id="faqAccordion">
+
+            <!-- Q1 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q1"
+                  aria-expanded="true"
+                  aria-controls="q1"
+                >
+                  Apakah rental tersedia dengan sopir?
+                </button>
+              </h3>
+
+              <div
+                id="q1"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Ya. Lotus Trans menyediakan layanan rental Suzuki XL7
+                  khusus dengan sopir untuk membantu perjalanan Anda
+                  dengan lebih nyaman dan praktis.
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Q2 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q2"
+                  aria-expanded="false"
+                  aria-controls="q2"
+                >
+                  Apakah tersedia layanan lepas kunci?
+                </button>
+              </h3>
+
+              <div
+                id="q2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Layanan saat ini tersedia khusus dengan sopir,
+                  sehingga belum menyediakan opsi rental lepas kunci.
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Q3 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q3"
+                  aria-expanded="false"
+                  aria-controls="q3"
+                >
+                  Apakah bisa untuk perjalanan luar kota?
+                </button>
+              </h3>
+
+              <div
+                id="q3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Bisa. Untuk perjalanan luar kota, silakan informasikan
+                  tujuan, tanggal perjalanan, jumlah penumpang, dan
+                  perkiraan durasi agar kami dapat memberikan informasi
+                  layanan dan biaya yang sesuai.
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Q4 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q4"
+                  aria-expanded="false"
+                  aria-controls="q4"
+                >
+                  Suzuki XL7 digunakan untuk kebutuhan apa saja?
+                </button>
+              </h3>
+
+              <div
+                id="q4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Armada dapat digunakan untuk berbagai kebutuhan,
+                  seperti perjalanan keluarga, keperluan bisnis,
+                  antar-jemput, city tour, acara keluarga, maupun
+                  perjalanan luar kota.
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Q5 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q5"
+                  aria-expanded="false"
+                  aria-controls="q5"
+                >
+                  Bagaimana cara melakukan booking?
+                </button>
+              </h3>
+
+              <div
+                id="q5"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Booking dapat dilakukan melalui WhatsApp Lotus Trans.
+                  Sampaikan tanggal penggunaan, kebutuhan perjalanan,
+                  lokasi penjemputan, tujuan, dan informasi lainnya.
+                  Tim kami akan membantu mengecek ketersediaan armada.
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Q6 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q6"
+                  aria-expanded="false"
+                  aria-controls="q6"
+                >
+                  Apa saja informasi yang perlu disiapkan saat booking?
+                </button>
+              </h3>
+
+              <div
+                id="q6"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Sebaiknya siapkan tanggal dan durasi penggunaan,
+                  lokasi penjemputan, tujuan perjalanan, serta jumlah
+                  penumpang. Untuk perjalanan luar kota, detail rute
+                  juga akan membantu proses pengecekan layanan.
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Q7 -->
+            <div class="accordion-item">
+
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q7"
+                  aria-expanded="false"
+                  aria-controls="q7"
+                >
+                  Apakah harga rental sudah termasuk sopir?
+                </button>
+              </h3>
+
+              <div
+                id="q7"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Detail harga dapat berbeda berdasarkan jenis layanan,
+                  durasi, dan tujuan perjalanan. Silakan cek halaman
+                  Pricing atau hubungi kami melalui WhatsApp untuk
+                  mendapatkan informasi sesuai kebutuhan Anda.
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Bisa booking untuk luar kota?</button></h2>
-          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Bisa, tinggal sebutkan tujuan dan durasinya.</div></div>
+
+
+        <!-- INFO SAMPING -->
+        <div class="col-lg-4">
+
+          <div class="section-label">
+            Lotus Trans
+          </div>
+
+          <h2 class="section-title">
+            Rental lebih praktis
+          </h2>
+
+          <p class="section-description">
+            Satu armada, satu layanan utama, dengan fokus pada
+            kenyamanan perjalanan Anda.
+          </p>
+
+
+          <div class="d-grid gap-3">
+
+            <div class="info-card">
+
+              <div class="info-icon">
+                01
+              </div>
+
+              <h3>
+                Suzuki XL7
+              </h3>
+
+              <p>
+                Armada utama Lotus Trans berupa Suzuki XL7 Manual Hybrid
+                yang cocok untuk perjalanan keluarga maupun kebutuhan
+                bisnis.
+              </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+              <div class="info-icon">
+                02
+              </div>
+
+              <h3>
+                Dengan Sopir
+              </h3>
+
+              <p>
+                Layanan tersedia khusus dengan sopir sehingga Anda dapat
+                lebih fokus menikmati perjalanan tanpa perlu mengemudi
+                sendiri.
+              </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+              <div class="info-icon">
+                03
+              </div>
+
+              <h3>
+                Dalam & Luar Kota
+              </h3>
+
+              <p>
+                Melayani berbagai kebutuhan perjalanan, mulai dari
+                aktivitas dalam kota hingga perjalanan luar kota sesuai
+                tujuan dan durasi.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Bagaimana cara booking?</button></h2>
-          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Langsung chat WhatsApp untuk cek ketersediaan dan konfirmasi.</div></div>
-        </div>
+
       </div>
+
+
+      <!-- CTA -->
+      <div class="cta-card">
+
+        <h2>
+          Masih ada yang ingin ditanyakan?
+        </h2>
+
+        <p>
+          Hubungi Lotus Trans melalui WhatsApp untuk mengecek
+          ketersediaan armada dan mendapatkan informasi sesuai
+          kebutuhan perjalanan Anda.
+        </p>
+
+        <a
+          href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-cta btn-primary-grad"
+        >
+          Tanya via WhatsApp
+        </a>
+
+      </div>
+
     </div>
+
   </section>
+
 </main>
-<a class="floating-wa" href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20mobil" target="_blank" rel="noopener">WhatsApp</a>
-<footer><div class="container">© 2026 Lotus Trans. Semua hak dilindungi.</div></footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a
+  class="floating-wa"
+  href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+  target="_blank"
+  rel="noopener"
+>
+  WhatsApp
+</a>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    Lotus Trans<br>
+    Rental Suzuki XL7 dengan Sopir<br><br>
+    © 2026 Lotus Trans. Semua hak dilindungi.
+  </div>
+</footer>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+```
