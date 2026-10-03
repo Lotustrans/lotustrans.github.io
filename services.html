@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Layanan | Lotus Trans</title>
 
   <meta
     name="description"
-    content="Layanan rental Suzuki XL7 dengan sopir untuk perjalanan per jam, harian, antar-jemput, city tour, dan perjalanan luar kota."
-  />
+    content="Layanan rental Suzuki XL7 dengan sopir untuk kebutuhan harian, bisnis, keluarga, antar-jemput, dan perjalanan luar kota."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,895 +25,711 @@
   >
 
   <style>
-    :root{
-      --bg:#07111d;
-      --card:rgba(10,18,33,.76);
-      --text:#eef4ff;
-      --muted:#9aa8bd;
-      --line:rgba(255,255,255,.08);
-
-      --accent:#22c55e;
-      --accent2:#38bdf8;
-
-      --shadow:0 22px 60px rgba(0,0,0,.38);
-
-      --radius:24px;
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0b1728;
+      --card: rgba(255,255,255,.045);
+      --card-hover: rgba(255,255,255,.07);
+      --text: #f4f7fb;
+      --muted: #9eacbf;
+      --line: rgba(255,255,255,.09);
+      --green: #19d47b;
+      --green-dark: #11b968;
+      --blue: #3b82f6;
     }
 
-    *{
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      margin:0;
-      font-family:Inter,system-ui,sans-serif;
-      color:var(--text);
-
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
       background:
-        radial-gradient(
-          circle at top left,
-          rgba(56,189,248,.10),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at top right,
-          rgba(34,197,94,.08),
-          transparent 26%
-        ),
-        linear-gradient(
-          180deg,
-          #040814 0%,
-          var(--bg) 100%
-        );
-
-      overflow-x:hidden;
+        radial-gradient(circle at 10% 10%, rgba(25,212,123,.07), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(59,130,246,.07), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    a{
-      text-decoration:none;
+    a {
+      text-decoration: none;
     }
 
     /* =========================
        NAVBAR
     ========================= */
 
-    .navbar-blur{
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
-
-      background:rgba(5,8,20,.72);
-
-      border-bottom:1px solid var(--line);
+    .navbar {
+      background: rgba(7,17,31,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
     }
 
-    .brand{
-      font-weight:800;
-      color:var(--text);
-
-      letter-spacing:-.02em;
-
-      font-size:1.25rem;
+    .navbar-brand {
+      color: #fff !important;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.5px;
     }
 
-    .brand span{
-      color:var(--accent);
+    .navbar-brand span {
+      color: var(--green);
     }
 
-    .nav-link{
-      color:var(--muted)!important;
-
-      font-weight:600;
-
-      padding:10px 12px!important;
-
-      transition:.2s ease;
+    .nav-link {
+      color: #aebbd0 !important;
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 10px;
+      transition: .25s ease;
     }
 
     .nav-link:hover,
-    .nav-link.active{
-      color:var(--text)!important;
+    .nav-link.active {
+      color: #fff !important;
     }
 
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .btn-cta{
-      border:0;
-
-      border-radius:14px;
-
-      padding:12px 18px;
-
-      font-weight:700;
-
-      display:inline-flex;
-
-      align-items:center;
-      justify-content:center;
-
-      transition:.2s ease;
+    .btn-wa-nav {
+      background: var(--green);
+      color: #04120b !important;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 9px 15px !important;
+      margin-left: 15px;
     }
 
-    .btn-primary-grad{
-      background:
-        linear-gradient(
-          135deg,
-          var(--accent),
-          #16a34a
-        );
-
-      color:#06110b;
-
-      box-shadow:
-        0 12px 28px rgba(34,197,94,.18);
+    .btn-wa-nav:hover {
+      background: #25e789;
     }
 
-    .btn-primary-grad:hover{
-      transform:translateY(-1px);
-
-      color:#06110b;
+    .navbar-toggler {
+      border-color: rgba(255,255,255,.15);
     }
 
-    .btn-soft{
-      background:rgba(255,255,255,.05);
-
-      border:1px solid var(--line);
-
-      color:var(--text);
-    }
-
-    .btn-soft:hover{
-      background:rgba(255,255,255,.08);
-
-      color:var(--text);
+    .navbar-toggler:focus {
+      box-shadow: none;
     }
 
     /* =========================
        HERO
     ========================= */
 
-    .hero{
-      padding:34px 0 18px;
+    .page-hero {
+      padding: 120px 0 75px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-box{
-      background:
-        linear-gradient(
-          110deg,
-          rgba(10,18,33,.94),
-          rgba(10,18,33,.72)
-        );
-
-      border:1px solid var(--line);
-
-      border-radius:28px;
-
-      box-shadow:var(--shadow);
-
-      padding:42px;
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(25,212,123,.06);
+      border-radius: 50%;
+      filter: blur(100px);
+      top: -200px;
+      left: -180px;
+      pointer-events: none;
     }
 
-    .section-label{
-      display:inline-block;
-
-      font-size:12px;
-
-      letter-spacing:.10em;
-
-      text-transform:uppercase;
-
-      color:var(--accent2);
-
-      font-weight:700;
-
-      margin-bottom:12px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-title{
-      font-size:clamp(34px,5vw,54px);
-
-      line-height:1.08;
-
-      font-weight:800;
-
-      letter-spacing:-.03em;
-
-      margin-bottom:16px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 50px;
+      background: rgba(25,212,123,.08);
+      border: 1px solid rgba(25,212,123,.18);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .hero-text{
-      color:#b8c4d7;
+    .page-hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
 
-      max-width:700px;
+    .page-hero h1 span {
+      color: var(--green);
+    }
 
-      font-size:17px;
-
-      line-height:1.75;
-
-      margin-bottom:0;
+    .page-hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 0;
     }
 
     /* =========================
        SECTION
     ========================= */
 
-    .section-pad{
-      padding:30px 0;
+    .section {
+      padding: 80px 0;
     }
 
-    .section-heading{
-      margin-bottom:22px;
+    .section-title {
+      margin-bottom: 42px;
     }
 
-    .section-heading h2{
-      font-size:28px;
-
-      font-weight:800;
-
-      letter-spacing:-.02em;
-
-      margin-bottom:8px;
+    .section-title h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
     }
 
-    .section-heading p{
-      color:var(--muted);
-
-      margin:0;
-
-      max-width:650px;
+    .section-title p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto;
     }
 
     /* =========================
        SERVICE CARDS
     ========================= */
 
-    .service-card{
-      height:100%;
-
-      background:var(--card);
-
-      border:1px solid var(--line);
-
-      border-radius:var(--radius);
-
-      box-shadow:var(--shadow);
-
-      padding:26px;
-
-      transition:.25s ease;
-
-      position:relative;
-
-      overflow:hidden;
+    .service-card {
+      height: 100%;
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      transition: .3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .service-card::after{
-      content:"";
-
-      position:absolute;
-
-      width:120px;
-      height:120px;
-
-      right:-55px;
-      bottom:-55px;
-
-      border-radius:50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(56,189,248,.10),
-          transparent 70%
-        );
+    .service-card::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      background: rgba(25,212,123,.06);
+      border-radius: 50%;
+      right: -60px;
+      top: -60px;
     }
 
-    .service-card:hover{
-      transform:translateY(-4px);
-
-      border-color:rgba(255,255,255,.13);
+    .service-card:hover {
+      transform: translateY(-5px);
+      background: var(--card-hover);
+      border-color: rgba(25,212,123,.2);
     }
 
-    .service-number{
-      color:rgba(255,255,255,.22);
-
-      font-size:13px;
-
-      font-weight:700;
-
-      letter-spacing:.08em;
-
-      margin-bottom:20px;
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      background: rgba(25,212,123,.1);
+      border: 1px solid rgba(25,212,123,.15);
+      font-size: 23px;
+      margin-bottom: 22px;
     }
 
-    .icon-badge{
-      width:50px;
-      height:50px;
-
-      border-radius:16px;
-
-      display:inline-flex;
-
-      align-items:center;
-      justify-content:center;
-
-      background:rgba(56,189,248,.10);
-
-      border:1px solid rgba(56,189,248,.18);
-
-      font-size:21px;
-
-      margin-bottom:18px;
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .service-card h3{
-      font-size:20px;
-
-      font-weight:700;
-
-      margin-bottom:10px;
-    }
-
-    .service-card p{
-      color:var(--muted);
-
-      line-height:1.7;
-
-      margin-bottom:0;
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
     }
 
     /* =========================
-       SUITABLE FOR
+       USE CASE
     ========================= */
 
-    .usecase-box{
-      background:
-        linear-gradient(
-          135deg,
-          rgba(56,189,248,.07),
-          rgba(34,197,94,.05)
-        );
-
-      border:1px solid var(--line);
-
-      border-radius:24px;
-
-      padding:28px;
+    .usecase-section {
+      padding: 25px 0 80px;
     }
 
-    .usecase-title{
-      font-size:20px;
-
-      font-weight:700;
-
-      margin-bottom:16px;
+    .usecase-box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 35px;
     }
 
-    .usecase-list{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
+    .usecase-box h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    .usecase-item{
-      display:inline-flex;
+    .usecase-box p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
 
-      align-items:center;
+    .usecase-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-      padding:10px 14px;
-
-      border-radius:999px;
-
-      background:rgba(255,255,255,.05);
-
-      border:1px solid var(--line);
-
-      color:#dbe5f5;
-
-      font-size:13px;
-
-      font-weight:600;
+    .usecase-item {
+      padding: 10px 15px;
+      border-radius: 50px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--line);
+      color: #dce4ef;
+      font-size: 13px;
+      font-weight: 500;
     }
 
     /* =========================
-       DRIVER INFO
+       XL7 SECTION
     ========================= */
 
-    .driver-box{
-      background:var(--card);
-
-      border:1px solid var(--line);
-
-      border-radius:24px;
-
-      padding:28px;
-
-      box-shadow:var(--shadow);
+    .vehicle-section {
+      padding: 20px 0 90px;
     }
 
-    .driver-box h2{
-      font-size:24px;
-
-      font-weight:800;
-
-      margin-bottom:10px;
+    .vehicle-image {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: #0a1525;
     }
 
-    .driver-box p{
-      color:var(--muted);
-
-      line-height:1.75;
-
-      margin-bottom:0;
+    .vehicle-content {
+      padding-left: 25px;
     }
 
-    .driver-point{
-      display:flex;
-
-      gap:12px;
-
-      align-items:flex-start;
-
-      margin-top:20px;
+    .vehicle-label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
     }
 
-    .driver-check{
-      width:30px;
-      height:30px;
-
-      flex:0 0 30px;
-
-      border-radius:10px;
-
-      display:flex;
-
-      align-items:center;
-      justify-content:center;
-
-      background:rgba(34,197,94,.10);
-
-      border:1px solid rgba(34,197,94,.18);
-
-      font-size:13px;
+    .vehicle-content h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
     }
 
-    .driver-point strong{
-      display:block;
-
-      font-size:14px;
-
-      margin-bottom:3px;
+    .vehicle-content > p {
+      color: var(--muted);
+      margin-bottom: 25px;
     }
 
-    .driver-point span{
-      color:var(--muted);
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
 
-      font-size:13px;
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
 
-      line-height:1.5;
+    .feature-check {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(25,212,123,.1);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .feature-text strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .feature-text span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       NOTE
+    ========================= */
+
+    .service-note {
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid var(--line);
+      color: #aebbd0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .service-note strong {
+      color: #e7edf6;
     }
 
     /* =========================
        CTA
     ========================= */
 
-    .cta-box{
+    .cta-section {
+      padding: 20px 0 90px;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      padding: 55px 45px;
+      border-radius: 25px;
       background:
         linear-gradient(
           135deg,
-          rgba(34,197,94,.10),
-          rgba(56,189,248,.08)
+          rgba(25,212,123,.10),
+          rgba(59,130,246,.07)
         );
-
-      border:1px solid var(--line);
-
-      border-radius:28px;
-
-      padding:34px;
-
-      text-align:center;
+      border: 1px solid rgba(255,255,255,.1);
     }
 
-    .cta-box h2{
-      font-size:28px;
-
-      font-weight:800;
-
-      margin-bottom:10px;
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(25,212,123,.07);
+      filter: blur(70px);
+      right: -100px;
+      top: -100px;
     }
 
-    .cta-box p{
-      color:var(--muted);
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
 
-      max-width:600px;
+    .cta-box h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
 
-      margin:0 auto 22px;
+    .cta-box p {
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 25px;
+    }
 
-      line-height:1.7;
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--green);
+      color: #04120b;
+      padding: 12px 20px;
+      border-radius: 11px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .btn-main:hover {
+      background: #25e789;
+      color: #04120b;
+      transform: translateY(-2px);
     }
 
     /* =========================
-       FLOATING WA
+       WHATSAPP FLOAT
     ========================= */
 
-    .floating-wa{
-      position:fixed;
-
-      right:18px;
-      bottom:18px;
-
-      z-index:9999;
-
-      border-radius:999px;
-
-      padding:14px 18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #25d366,
-          #128c7e
-        );
-
-      color:#fff;
-
-      font-weight:700;
-
-      box-shadow:
-        0 18px 35px rgba(0,0,0,.35);
-
-      border:0;
-
-      transition:.2s ease;
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #04120b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      z-index: 999;
+      transition: .25s ease;
     }
 
-    .floating-wa:hover{
-      transform:translateY(-2px);
-
-      color:#fff;
+    .wa-float:hover {
+      transform: translateY(-3px) scale(1.03);
+      color: #04120b;
     }
 
     /* =========================
        FOOTER
     ========================= */
 
-    footer{
-      padding:30px 0 44px;
-
-      color:var(--muted);
-
-      font-size:14px;
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      color: #7f8da2;
+      font-size: 13px;
     }
 
-    .footer-brand{
-      color:var(--text);
-
-      font-weight:700;
-
-      margin-bottom:4px;
+    footer strong {
+      color: #dce4ef;
     }
 
     /* =========================
-       NAVBAR TOGGLER
+       RESPONSIVE
     ========================= */
 
-    .navbar-toggler{
-      border:1px solid rgba(255,255,255,.18);
+    @media (max-width: 991px) {
 
-      box-shadow:none!important;
+      .navbar-collapse {
+        padding: 15px 0 10px;
+      }
 
-      border-radius:14px;
+      .nav-link {
+        margin-left: 0;
+        padding: 10px 0 !important;
+      }
 
-      padding:10px 12px;
+      .btn-wa-nav {
+        display: inline-block;
+        margin: 10px 0 0;
+      }
+
+      .page-hero {
+        padding-top: 105px;
+      }
+
+      .vehicle-content {
+        padding-left: 0;
+        padding-top: 30px;
+      }
     }
 
-    .navbar-toggler:focus{
-      box-shadow:none!important;
-    }
+    @media (max-width: 767px) {
 
-    /* =========================
-       DESKTOP
-    ========================= */
-
-    @media (min-width:992px){
-
-      .navbar-collapse{
-        display:flex!important;
-
-        justify-content:flex-end;
+      .page-hero {
+        padding: 100px 0 60px;
       }
 
-      .navbar-nav{
-        align-items:center;
+      .page-hero h1 {
+        letter-spacing: -1.5px;
       }
 
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width:991.98px){
-
-      .hero-box{
-        padding:28px;
+      .section {
+        padding: 60px 0;
       }
 
-      .navbar-collapse{
-        margin-top:16px;
-
-        padding:14px;
-
-        border:1px solid var(--line);
-
-        border-radius:18px;
-
-        background:rgba(5,8,20,.85);
+      .service-card {
+        padding: 25px;
       }
 
-      .nav-link{
-        padding:12px 0!important;
-
-        border-bottom:1px solid rgba(255,255,255,.06);
+      .usecase-box {
+        padding: 25px;
       }
 
-      .navbar-collapse .btn{
-        width:100%;
-
-        margin-top:10px;
+      .vehicle-image {
+        min-height: 250px;
       }
 
-    }
-
-    @media (max-width:575.98px){
-
-      .hero{
-        padding-top:20px;
+      .vehicle-section {
+        padding-bottom: 65px;
       }
 
-      .hero-box{
-        padding:24px;
-
-        border-radius:24px;
+      .cta-section {
+        padding-bottom: 70px;
       }
 
-      .hero-title{
-        font-size:36px;
+      .cta-box {
+        padding: 35px 25px;
       }
 
-      .hero-text{
-        font-size:15px;
+      .wa-float {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        bottom: 16px;
       }
-
-      .section-heading h2{
-        font-size:24px;
-      }
-
-      .service-card{
-        padding:22px;
-      }
-
-      .cta-box{
-        padding:28px 20px;
-      }
-
-      .cta-box h2{
-        font-size:24px;
-      }
-
-      .floating-wa{
-        right:14px;
-        bottom:14px;
-
-        padding:13px 16px;
-      }
-
     }
   </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
+  <!-- =========================
+       NAVBAR
+  ========================= -->
 
-<header class="navbar-blur sticky-top">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
 
-  <div class="container">
-
-    <nav class="navbar navbar-expand-lg navbar-dark py-3">
-
-      <a
-        class="navbar-brand brand"
-        href="index.html"
-      >
+      <a class="navbar-brand" href="index.html">
         Lotus<span>Trans</span>
       </a>
 
       <button
-        class="navbar-toggler ms-auto"
+        class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div
-        class="collapse navbar-collapse"
-        id="mainNav"
-      >
+      <div class="collapse navbar-collapse" id="navbarNav">
 
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
 
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="index.html"
-            >
-              Home
-            </a>
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">Layanan</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Galeri</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontak</a>
           </li>
 
           <li class="nav-item">
             <a
-              class="nav-link active"
-              href="services.html"
-            >
-              Layanan
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="pricing.html"
-            >
-              Pricing
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="gallery.html"
-            >
-              Galeri
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="faq.html"
-            >
-              FAQ
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="contact.html"
-            >
-              Kontak
-            </a>
-          </li>
-
-          <li class="nav-item mt-3 mt-lg-0">
-
-            <a
-              class="btn btn-cta btn-primary-grad ms-lg-2"
+              class="nav-link btn-wa-nav"
               href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
               target="_blank"
               rel="noopener"
             >
               Pesan via WhatsApp
             </a>
-
           </li>
 
         </ul>
 
       </div>
-
-    </nav>
-
-  </div>
-
-</header>
+    </div>
+  </nav>
 
 
-<!-- =========================
-     MAIN
-========================= -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<main>
+  <header class="page-hero">
 
-  <!-- HERO -->
+    <div class="container hero-content">
 
-  <section class="hero">
-
-    <div class="container">
-
-      <div class="hero-box">
-
-        <div class="section-label">
-          Layanan Lotus Trans
-        </div>
-
-        <h1 class="hero-title">
-          Perjalanan Anda,<br>
-          Kami Siapkan.
-        </h1>
-
-        <p class="hero-text">
-          Pilihan layanan dengan Suzuki XL7 dan sopir untuk
-          kebutuhan perjalanan keluarga, bisnis, antar-jemput,
-          hingga perjalanan luar kota.
-        </p>
-
+      <div class="eyebrow">
+        🚘 Suzuki XL7 • Dengan Sopir
       </div>
+
+      <h1>
+        Perjalanan Anda,<br>
+        <span>Kami Siapkan.</span>
+      </h1>
+
+      <p>
+        Pilihan layanan rental Suzuki XL7 dengan sopir untuk kebutuhan
+        keluarga, bisnis, antar-jemput, hingga perjalanan luar kota.
+        Fleksibel menyesuaikan kebutuhan perjalanan Anda.
+      </p>
 
     </div>
 
-  </section>
+  </header>
 
 
-  <!-- SERVICES -->
+  <!-- =========================
+       MAIN SERVICES
+  ========================= -->
 
-  <section class="section-pad">
+  <section class="section pt-0">
 
     <div class="container">
 
-      <div class="section-heading">
+      <div class="section-title text-center">
 
-        <h2>
-          Pilihan Layanan
-        </h2>
+        <h2>Layanan Utama</h2>
 
         <p>
-          Pilih durasi dan jenis perjalanan sesuai kebutuhan Anda.
+          Pilih layanan sesuai kebutuhan perjalanan Anda.
+          Semua layanan menggunakan Suzuki XL7 dengan sopir.
         </p>
 
       </div>
 
 
-      <div class="row g-3">
+      <div class="row g-4">
 
-
-        <!-- SERVICE 1 -->
+        <!-- Service 1 -->
 
         <div class="col-md-6 col-lg-4">
 
           <div class="service-card">
 
-            <div class="service-number">
-              01
+            <div class="service-icon">
+              🕐
             </div>
 
-            <div class="icon-badge">
-              🕒
-            </div>
-
-            <h3>
-              Sewa Per Jam
-            </h3>
+            <h3>Sewa Per Jam</h3>
 
             <p>
-              Pilihan praktis untuk meeting, keperluan bisnis,
-              urusan pribadi, atau mobilitas dalam kota.
+              Cocok untuk kebutuhan meeting, urusan bisnis,
+              perjalanan singkat, aktivitas personal, maupun
+              mobilitas dalam kota yang membutuhkan waktu fleksibel.
             </p>
 
           </div>
@@ -921,27 +737,22 @@
         </div>
 
 
-        <!-- SERVICE 2 -->
+        <!-- Service 2 -->
 
         <div class="col-md-6 col-lg-4">
 
           <div class="service-card">
 
-            <div class="service-number">
-              02
+            <div class="service-icon">
+              📅
             </div>
 
-            <div class="icon-badge">
-              🚘
-            </div>
-
-            <h3>
-              Sewa Harian
-            </h3>
+            <h3>Sewa Harian</h3>
 
             <p>
-              Gunakan untuk kebutuhan perjalanan seharian,
-              acara keluarga, pekerjaan, maupun aktivitas lainnya.
+              Solusi praktis untuk aktivitas seharian, perjalanan
+              keluarga, acara, kebutuhan kerja, maupun agenda lain
+              yang membutuhkan kendaraan selama satu hari.
             </p>
 
           </div>
@@ -949,33 +760,27 @@
         </div>
 
 
-        <!-- SERVICE 3 -->
+        <!-- Service 3 -->
 
         <div class="col-md-6 col-lg-4">
 
           <div class="service-card">
 
-            <div class="service-number">
-              03
-            </div>
-
-            <div class="icon-badge">
+            <div class="service-icon">
               🛣️
             </div>
 
-            <h3>
-              Perjalanan Luar Kota
-            </h3>
+            <h3>Perjalanan Luar Kota</h3>
 
             <p>
-              Untuk perjalanan antarkota dengan rute dan
-              kebutuhan perjalanan yang dapat disesuaikan.
+              Untuk perjalanan antar kota dengan rute dan kebutuhan
+              perjalanan yang dapat disesuaikan. Cocok untuk keluarga,
+              bisnis, maupun perjalanan pribadi.
             </p>
 
           </div>
 
         </div>
-
 
       </div>
 
@@ -984,17 +789,22 @@
   </section>
 
 
-  <!-- USE CASE -->
+  <!-- =========================
+       USE CASE
+  ========================= -->
 
-  <section class="section-pad">
+  <section class="usecase-section">
 
     <div class="container">
 
       <div class="usecase-box">
 
-        <div class="usecase-title">
-          Cocok untuk berbagai kebutuhan
-        </div>
+        <h3>Cocok untuk Berbagai Kebutuhan</h3>
+
+        <p>
+          Satu kendaraan untuk berbagai jenis perjalanan,
+          dengan layanan yang bisa disesuaikan dengan kebutuhan Anda.
+        </p>
 
         <div class="usecase-list">
 
@@ -1007,7 +817,7 @@
           </div>
 
           <div class="usecase-item">
-            ✈️ Antar-Jemput
+            🚕 Antar-Jemput
           </div>
 
           <div class="usecase-item">
@@ -1019,7 +829,7 @@
           </div>
 
           <div class="usecase-item">
-            📅 Keperluan Harian
+            📍 Keperluan Harian
           </div>
 
         </div>
@@ -1031,102 +841,118 @@
   </section>
 
 
-  <!-- DRIVER & VEHICLE -->
+  <!-- =========================
+       VEHICLE + DRIVER
+  ========================= -->
 
-  <section class="section-pad">
+  <section class="vehicle-section">
 
     <div class="container">
 
-      <div class="driver-box">
+      <div class="row align-items-center g-4">
 
-        <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
 
-          <div class="col-lg-7">
+          <img
+            src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
+            alt="Suzuki XL7 Lotus Trans"
+            class="vehicle-image"
+          >
 
-            <div class="section-label">
-              Satu Layanan, Satu Standar
+        </div>
+
+
+        <div class="col-lg-6">
+
+          <div class="vehicle-content">
+
+            <div class="vehicle-label">
+              Armada Kami
             </div>
 
             <h2>
-              Suzuki XL7 dengan Sopir
+              Suzuki XL7<br>
+              dengan Sopir
             </h2>
 
             <p>
-              Seluruh layanan Lotus Trans menggunakan Suzuki XL7
-              dengan layanan sopir. Jadi Anda bisa fokus pada
-              tujuan perjalanan tanpa perlu repot mengemudi sendiri.
+              Suzuki XL7 menjadi pilihan utama Lotus Trans untuk
+              memberikan perjalanan yang nyaman, praktis, dan cocok
+              untuk berbagai kebutuhan.
             </p>
 
-            <div class="driver-point">
 
-              <div class="driver-check">
-                ✓
+            <div class="feature-list">
+
+              <div class="feature-item">
+
+                <div class="feature-check">
+                  ✓
+                </div>
+
+                <div class="feature-text">
+
+                  <strong>Nyaman untuk keluarga</strong>
+
+                  <span>
+                    Kabin yang nyaman untuk perjalanan bersama keluarga
+                    maupun kebutuhan pribadi.
+                  </span>
+
+                </div>
+
               </div>
 
-              <div>
-                <strong>
-                  Nyaman untuk keluarga
-                </strong>
 
-                <span>
-                  Kabin yang lega untuk perjalanan bersama keluarga.
-                </span>
+              <div class="feature-item">
+
+                <div class="feature-check">
+                  ✓
+                </div>
+
+                <div class="feature-text">
+
+                  <strong>Praktis untuk kebutuhan bisnis</strong>
+
+                  <span>
+                    Anda dapat fokus pada aktivitas tanpa perlu
+                    menyetir sendiri.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="feature-item">
+
+                <div class="feature-check">
+                  ✓
+                </div>
+
+                <div class="feature-text">
+
+                  <strong>Fleksibel mengikuti perjalanan</strong>
+
+                  <span>
+                    Layanan dapat disesuaikan dengan durasi dan
+                    kebutuhan perjalanan Anda.
+                  </span>
+
+                </div>
+
               </div>
 
             </div>
 
 
-            <div class="driver-point">
+            <!-- NOTE LELAPAS KUNCI -->
 
-              <div class="driver-check">
-                ✓
-              </div>
+            <div class="service-note">
 
-              <div>
-                <strong>
-                  Praktis untuk kebutuhan bisnis
-                </strong>
-
-                <span>
-                  Perjalanan lebih fleksibel tanpa harus menyetir sendiri.
-                </span>
-              </div>
-
-            </div>
-
-
-            <div class="driver-point">
-
-              <div class="driver-check">
-                ✓
-              </div>
-
-              <div>
-                <strong>
-                  Bisa disesuaikan dengan perjalanan
-                </strong>
-
-                <span>
-                  Pilih durasi dan tujuan sesuai kebutuhan Anda.
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="col-lg-5">
-
-            <div
-              class="rounded-4 overflow-hidden border border-light border-opacity-10"
-            >
-
-              <img
-                src="https://drive.google.com/thumbnail?id=143q7GOCUUsRaIW5ScmY8K76stH6ovhO_&sz=w2000"
-                alt="Suzuki XL7 Lotus Trans"
-                style="width:100%;height:300px;object-fit:cover;"
-              >
+              <strong>Catatan:</strong>
+              Lotus Trans melayani rental Suzuki XL7 khusus dengan
+              sopir dan belum menyediakan layanan lepas kunci.
 
             </div>
 
@@ -1141,31 +967,37 @@
   </section>
 
 
-  <!-- CTA -->
+  <!-- =========================
+       CTA
+  ========================= -->
 
-  <section class="section-pad">
+  <section class="cta-section">
 
     <div class="container">
 
       <div class="cta-box">
 
-        <h2>
-          Sudah tahu kebutuhan perjalanan Anda?
-        </h2>
+        <div class="cta-content">
 
-        <p>
-          Hubungi Lotus Trans untuk mengecek ketersediaan,
-          harga, dan detail perjalanan Anda.
-        </p>
+          <h2>
+            Sudah tahu kebutuhan perjalanan Anda?
+          </h2>
 
-        <a
-          class="btn btn-cta btn-primary-grad"
-          href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20tanya%20layanan%20rental%20Suzuki%20XL7"
-          target="_blank"
-          rel="noopener"
-        >
-          Tanya via WhatsApp
-        </a>
+          <p>
+            Hubungi Lotus Trans melalui WhatsApp untuk mengecek
+            ketersediaan, harga, dan detail perjalanan Anda.
+          </p>
+
+          <a
+            href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+            target="_blank"
+            rel="noopener"
+            class="btn-main"
+          >
+            💬 Tanya & Booking via WhatsApp
+          </a>
+
+        </div>
 
       </div>
 
@@ -1173,51 +1005,51 @@
 
   </section>
 
-</main>
 
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
+  <footer>
 
-<a
-  class="floating-wa"
-  href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
-  target="_blank"
-  rel="noopener"
->
-  WhatsApp
-</a>
+    <div class="container">
 
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
 
-<!-- =========================
-     FOOTER
-========================= -->
+        <div>
+          <strong>Lotus Trans</strong>
+          — Rental Suzuki XL7 dengan Sopir
+        </div>
 
-<footer>
+        <div>
+          © 2026 Lotus Trans. All rights reserved.
+        </div>
 
-  <div class="container">
+      </div>
 
-    <div class="footer-brand">
-      Lotus Trans
     </div>
 
-    <div>
-      Rental Suzuki XL7 dengan Sopir
-    </div>
-
-    <div class="mt-2">
-      © 2026 Lotus Trans. Semua hak dilindungi.
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-></script>
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
+
+  <a
+    href="https://wa.me/6283840987113?text=Halo%20saya%20mau%20booking%20rental%20Suzuki%20XL7"
+    target="_blank"
+    rel="noopener"
+    class="wa-float"
+    aria-label="Chat WhatsApp"
+  >
+    💬
+  </a>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
 
 </body>
 </html>
